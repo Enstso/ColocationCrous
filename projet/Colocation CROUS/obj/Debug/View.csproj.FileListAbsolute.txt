@@ -1,0 +1,13 @@
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe.config
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\bin\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererColocataire.resources
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Form1.resources
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererDepenses.resources
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Properties.Resources.resources
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
