@@ -29,70 +29,86 @@ namespace Colocation_CROUS
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbColocataire = new System.Windows.Forms.ListBox();
+            this.btnajouter = new System.Windows.Forms.Button();
+            this.btnsupprimer = new System.Windows.Forms.Button();
+            this.btnmodifier = new System.Windows.Forms.Button();
+            this.lblColocataire = new System.Windows.Forms.Label();
+            this.btnsave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbColocataire
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(126, 104);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(550, 228);
-            this.listBox1.TabIndex = 0;
+            this.lbColocataire.FormattingEnabled = true;
+            this.lbColocataire.Location = new System.Drawing.Point(94, 84);
+            this.lbColocataire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbColocataire.Name = "lbColocataire";
+            this.lbColocataire.Size = new System.Drawing.Size(414, 186);
+            this.lbColocataire.TabIndex = 0;
             // 
-            // button1
+            // btnajouter
             // 
-            this.button1.Location = new System.Drawing.Point(126, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnajouter.Location = new System.Drawing.Point(94, 293);
+            this.btnajouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnajouter.Name = "btnajouter";
+            this.btnajouter.Size = new System.Drawing.Size(84, 30);
+            this.btnajouter.TabIndex = 1;
+            this.btnajouter.Text = "Ajouter";
+            this.btnajouter.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnsupprimer
             // 
-            this.button2.Location = new System.Drawing.Point(564, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 37);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Supprimer";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnsupprimer.Location = new System.Drawing.Point(321, 292);
+            this.btnsupprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsupprimer.Name = "btnsupprimer";
+            this.btnsupprimer.Size = new System.Drawing.Size(84, 30);
+            this.btnsupprimer.TabIndex = 2;
+            this.btnsupprimer.Text = "Supprimer";
+            this.btnsupprimer.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnmodifier
             // 
-            this.button3.Location = new System.Drawing.Point(338, 361);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Modifier";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnmodifier.Location = new System.Drawing.Point(206, 292);
+            this.btnmodifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmodifier.Name = "btnmodifier";
+            this.btnmodifier.Size = new System.Drawing.Size(84, 30);
+            this.btnmodifier.TabIndex = 3;
+            this.btnmodifier.Text = "Modifier";
+            this.btnmodifier.UseVisualStyleBackColor = true;
+            
             // 
-            // label1
+            // lblColocataire
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(564, 68);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Gerer les Colocataires";
+            this.lblColocataire.AutoSize = true;
+            this.lblColocataire.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColocataire.Location = new System.Drawing.Point(86, 7);
+            this.lblColocataire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblColocataire.Name = "lblColocataire";
+            this.lblColocataire.Size = new System.Drawing.Size(443, 55);
+            this.lblColocataire.TabIndex = 4;
+            this.lblColocataire.Text = "Gerer les Colocataires";
+            // 
+            // btnsave
+            // 
+            this.btnsave.Location = new System.Drawing.Point(432, 293);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(76, 29);
+            this.btnsave.TabIndex = 5;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
             // 
             // GererColocataire
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 461);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(617, 375);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.lblColocataire);
+            this.Controls.Add(this.btnmodifier);
+            this.Controls.Add(this.btnsupprimer);
+            this.Controls.Add(this.btnajouter);
+            this.Controls.Add(this.lbColocataire);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GererColocataire";
             this.Text = "Gerer Colocataire";
             this.ResumeLayout(false);
@@ -102,10 +118,11 @@ namespace Colocation_CROUS
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lbColocataire;
+        private System.Windows.Forms.Button btnajouter;
+        private System.Windows.Forms.Button btnsupprimer;
+        private System.Windows.Forms.Button btnmodifier;
+        private System.Windows.Forms.Label lblColocataire;
+        private System.Windows.Forms.Button btnsave;
     }
 }

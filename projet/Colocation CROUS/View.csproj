@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Colocation_CROUS</RootNamespace>
     <AssemblyName>Colocation CROUS</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FnouveauColocataire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FnouveauColocataire.Designer.cs">
+      <DependentUpon>FnouveauColocataire.cs</DependentUpon>
+    </Compile>
     <Compile Include="GererColocataire.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +80,9 @@
     <Compile Include="Repartir Depense.Designer.cs">
       <DependentUpon>Repartir Depense.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FnouveauColocataire.resx">
+      <DependentUpon>FnouveauColocataire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GererColocataire.resx">
       <DependentUpon>GererColocataire.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +100,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Repartir Depense.resx">
       <DependentUpon>Repartir Depense.cs</DependentUpon>
@@ -106,6 +117,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dao\Dao.csproj">
+      <Project>{5bb26dc9-0e23-42ac-8dd3-47f20c3d0551}</Project>
+      <Name>Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{4757b721-fcf7-4c6f-9c5b-81e6d4960989}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

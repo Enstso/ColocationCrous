@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Dao;
 namespace Colocation_CROUS
 {
     public partial class Form1 : Form
@@ -15,12 +15,13 @@ namespace Colocation_CROUS
         public Form1()
         {
             InitializeComponent();
+            DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbCrous");
         }
 
         private void btnGererColoc_Click(object sender, EventArgs e)
         {
-            GererColocataire s = new GererColocataire();
-            s.Show();
+            GererColocataire gererColocataire = new GererColocataire();
+            gererColocataire.Show();
         }
 
         private void btnGererDepenses_Click(object sender, EventArgs e)

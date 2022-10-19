@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Depenses
+    public class Depenses
     {
         private int id;
         private DateTime date;
@@ -14,8 +14,9 @@ namespace Model
         private string justificatif;
         private decimal montant;
         private bool reparti;
+        private State state;
 
-        public Depenses(int id,DateTime date,string text, string justificatif,decimal montant,bool reparti)
+        public Depenses(int id,DateTime date,string text, string justificatif,decimal montant,bool reparti, State state)
         {
             this.id = id;
             this.date = date;
@@ -23,15 +24,22 @@ namespace Model
             this.justificatif = justificatif;
             this.montant = montant;
             this.reparti = reparti;
+            this.state = state;
         }
 
         public int Id { get { return this.id; } set { this.id = value; } }
         public DateTime Date { get { return this.date; } set { this.date = value; } }
         public string Justificatif { get { return this.justificatif; } set { this.justificatif = value; } }
-        public string Montant { get { return this} }
+        public decimal Montant { get { return this.montant; } set { this.montant = value; } }
+        public bool Reparti { get { return this.reparti; } set { this.reparti = value; } }
+        public State State { get { return this.state; } set { this.state = value; } }
+       
+        public void Remove()
+        {
+            this.state = State.deleted;
+        }
 
-
-
+        
 
     }
 }

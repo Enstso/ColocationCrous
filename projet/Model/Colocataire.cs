@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace Model
 {
-    class Colocataire
+   public class Colocataire
     {
         private int id;
         private string nom;
         private string prenom;
         private string mail;
         private string telephone;
-
-        public Colocataire(int id, string nom, string prenom, string mail, string telephone)
+        private State state;
+        public Colocataire(int id, string nom, string prenom, string mail, string telephone,State state)
         {
             this.id = id;
             this.nom = nom;
             this.prenom = prenom;
             this.mail = mail;
             this.telephone = telephone;
+            this.state = state;
         }
 
         public int Id
@@ -29,6 +29,10 @@ namespace Model
             get
             {
                 return this.id;
+            }
+            set
+            {
+                this.id = value;
             }
         }
 
@@ -80,6 +84,19 @@ namespace Model
             }
         }
 
+        public State State
+        {
+            get
+            {
+                return this.state;
+            }
+
+            set
+            {
+                this.state = value;
+            }
+        }
+
         public double aPaye()
         {
             double d= 0.0;
@@ -90,5 +107,12 @@ namespace Model
         {
 
         }
+
+        public void Remove()
+        {
+            this.state = State.deleted;
+        }
+
+        
     }
 }

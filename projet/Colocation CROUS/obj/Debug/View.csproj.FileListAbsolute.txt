@@ -11,3 +11,34 @@ C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\View.csproj.CoreCompil
 C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
 C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
 C:\Users\Zunaid\Desktop\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe.config
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.AssemblyReference.cache
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererColocataire.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Form1.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererDepenses.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Properties.Resources.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.GenerateResource.cache
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Model.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Google.Protobuf.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\ZstdNet.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\BouncyCastle.Crypto.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\System.Memory.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\System.Buffers.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Compression.LZ4.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Hash.xxHash.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\System.Numerics.Vectors.dll
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Model.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.xml
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe.config
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FnouveauColocataire.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
