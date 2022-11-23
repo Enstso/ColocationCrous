@@ -31,7 +31,12 @@ namespace Colocation_CROUS
 
                 case State.modified:
                     this.Text = "Modification d'un locataire";
-                        break;
+                    Colocataire colocataire = (Colocataire)items[this.position];
+                    this.tbNom.Text = colocataire.Nom;
+                    this.tbPrenom.Text = colocataire.Prenom;
+                    this.tbMail.Text = colocataire.Mail;
+                    this.tbTelephone.Text = colocataire.Telephone;
+                    break;
 
                 case State.deleted:
                     this.Text = "Suppression d'un locataire";
@@ -58,9 +63,11 @@ namespace Colocation_CROUS
                     Colocataire colocataire = (Colocataire)items[this.position];
                     colocataire.Nom = this.tbNom.Text;
                     colocataire.Prenom = this.tbPrenom.Text;
-                    colocataire.Mail = this.tbMail.Text;
+                    colocataire.Mail= this.tbMail.Text;
                     colocataire.Telephone = this.tbTelephone.Text;
+                    colocataire.State = this.state;
                     items[this.position] = colocataire;
+                    
                     break;
                 case State.deleted:
                     break;

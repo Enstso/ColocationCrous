@@ -44,13 +44,12 @@ namespace Dao
                 }
             }
         }
-
         private void update(Colocataire colocataire)
         {
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
-                using (MySqlCommand cmd = new MySqlCommand("update Colocataire set nom=@nom,prenom=@prenom,mail=@mail,telephone=@telephone  where id=@id", cnx))
+                using (MySqlCommand cmd = new MySqlCommand("Update Colocataire set nom=@nom,prenom=@prenom,mail=@mail,telephone=@telephone  where id=@id", cnx))
                 {
                     cmd.Parameters.Add(new MySqlParameter("@id", MySqlDbType.Int32));
                     cmd.Parameters.Add(new MySqlParameter("@nom", MySqlDbType.VarChar));
@@ -64,6 +63,7 @@ namespace Dao
                     cmd.Parameters["@telephone"].Value = colocataire.Telephone;
                     cmd.ExecuteNonQuery();
                 }
+                cnx.Close();
             }
             colocataire.State = State.unChanged;
         }

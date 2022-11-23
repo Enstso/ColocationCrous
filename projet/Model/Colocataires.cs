@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Colocataires : Colocataire
+    class Colocataires
     {
-        public Colocataires(int id, string nom, string prenom, string mail, string telephone, State state):base( id,  nom,  prenom,  mail,  telephone,state)
+       private List<Colocataire> lesColocataires;
+        public Colocataires()
         {
-            
+            this.lesColocataires = new List<Colocataire>();
         }
 
-        public void Count()
+        public int Count
         {
-            
+            get{
+                return this.lesColocataires.Count;
+               }
         }
     }
 }

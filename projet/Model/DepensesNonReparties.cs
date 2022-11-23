@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class DepensesNonReparties:Depenses
+    class DepensesNonReparties
     {
-        public DepensesNonReparties(int id, DateTime date, string text, string justificatif, decimal montant, bool reparti , State state) : base(id, date, text, justificatif, montant, reparti, state)
-        {
+        public DepensesNonReparties(int id, DateTime date, string text, string justificatif, decimal montant, bool reparti , State state)
+        { 
 
         }
     }

@@ -47,9 +47,12 @@ namespace Colocation_CROUS
         {
             if (lbColocataire.SelectedIndex == -1)
                 return;
-            int position = lbColocataire.SelectedIndex;
-            FnouveauColocataire fedit = new FnouveauColocataire(State.modified, lbColocataire.Items, position);
-            fedit.Show();
+            else
+            {
+                int position = lbColocataire.SelectedIndex;
+                FnouveauColocataire fedit = new FnouveauColocataire(State.modified, lbColocataire.Items, position);
+                fedit.Show();
+            }
         }
 
         private void Btnajouter_Click(object sender, EventArgs e)
