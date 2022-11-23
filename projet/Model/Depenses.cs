@@ -16,7 +16,7 @@ namespace Model
         private bool reparti;
         private State state;
 
-        public Depenses(int id,DateTime date,string text, string justificatif,decimal montant,bool reparti, State state)
+        public Depenses(int id,DateTime date,string text, string justificatif,decimal montant,bool reparti,int idColoc, State state)
         {
             this.id = id;
             this.date = date;
