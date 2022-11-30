@@ -40,6 +40,7 @@ namespace Colocation_CROUS
             this.tbTexte = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbidColoc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@ namespace Colocation_CROUS
             // lblLaDate
             // 
             this.lblLaDate.AutoSize = true;
-            this.lblLaDate.Location = new System.Drawing.Point(52, 36);
+            this.lblLaDate.Location = new System.Drawing.Point(25, 101);
             this.lblLaDate.Name = "lblLaDate";
             this.lblLaDate.Size = new System.Drawing.Size(36, 13);
             this.lblLaDate.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace Colocation_CROUS
             // lblTexte
             // 
             this.lblTexte.AutoSize = true;
-            this.lblTexte.Location = new System.Drawing.Point(52, 86);
+            this.lblTexte.Location = new System.Drawing.Point(25, 137);
             this.lblTexte.Name = "lblTexte";
             this.lblTexte.Size = new System.Drawing.Size(40, 13);
             this.lblTexte.TabIndex = 2;
@@ -73,7 +74,7 @@ namespace Colocation_CROUS
             // lblJustificatif
             // 
             this.lblJustificatif.AutoSize = true;
-            this.lblJustificatif.Location = new System.Drawing.Point(285, 83);
+            this.lblJustificatif.Location = new System.Drawing.Point(292, 58);
             this.lblJustificatif.Name = "lblJustificatif";
             this.lblJustificatif.Size = new System.Drawing.Size(59, 13);
             this.lblJustificatif.TabIndex = 3;
@@ -82,7 +83,7 @@ namespace Colocation_CROUS
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(52, 135);
+            this.lblMontant.Location = new System.Drawing.Point(25, 187);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(52, 13);
             this.lblMontant.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace Colocation_CROUS
             // btnReparti
             // 
             this.btnReparti.AutoSize = true;
-            this.btnReparti.Location = new System.Drawing.Point(52, 193);
+            this.btnReparti.Location = new System.Drawing.Point(30, 231);
             this.btnReparti.Name = "btnReparti";
             this.btnReparti.Size = new System.Drawing.Size(47, 13);
             this.btnReparti.TabIndex = 5;
@@ -99,45 +100,56 @@ namespace Colocation_CROUS
             // 
             // tbDate
             // 
-            this.tbDate.Location = new System.Drawing.Point(124, 36);
+            this.tbDate.Location = new System.Drawing.Point(98, 101);
             this.tbDate.Name = "tbDate";
             this.tbDate.Size = new System.Drawing.Size(100, 20);
             this.tbDate.TabIndex = 6;
+            this.tbDate.TextChanged += new System.EventHandler(this.tbDate_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 135);
+            this.textBox3.Location = new System.Drawing.Point(98, 180);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 8;
             // 
             // tbTexte
             // 
-            this.tbTexte.Location = new System.Drawing.Point(124, 83);
+            this.tbTexte.Location = new System.Drawing.Point(98, 137);
             this.tbTexte.Name = "tbTexte";
             this.tbTexte.Size = new System.Drawing.Size(100, 20);
             this.tbTexte.TabIndex = 9;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(124, 193);
+            this.textBox5.Location = new System.Drawing.Point(98, 228);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 10;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(288, 118);
+            this.pictureBox1.Location = new System.Drawing.Point(267, 106);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 142);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // cbidColoc
+            // 
+            this.cbidColoc.FormattingEnabled = true;
+            this.cbidColoc.Location = new System.Drawing.Point(77, 36);
+            this.cbidColoc.Name = "cbidColoc";
+            this.cbidColoc.Size = new System.Drawing.Size(121, 21);
+            this.cbidColoc.TabIndex = 12;
+            this.cbidColoc.SelectedIndexChanged += new System.EventHandler(this.cbidColoc_SelectedIndexChanged);
             // 
             // FNouvelleDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 379);
+            this.Controls.Add(this.cbidColoc);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.tbTexte);
@@ -151,6 +163,7 @@ namespace Colocation_CROUS
             this.Controls.Add(this.btnValider);
             this.Name = "FNouvelleDepense";
             this.Text = "FNouvelleDepense";
+            this.Load += new System.EventHandler(this.FNouvelleDepense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +183,6 @@ namespace Colocation_CROUS
         private System.Windows.Forms.TextBox tbTexte;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbidColoc;
     }
 }

@@ -17,7 +17,7 @@ namespace Colocation_CROUS
         public GererDepenses()
         {
             InitializeComponent();
-            this.load(new DaoDepense().GetAll());
+            
         }
 
         public void load(List<Depenses> depenses)
@@ -27,6 +27,11 @@ namespace Colocation_CROUS
             {
                 lbGererDepenses.Items.Add(depense);
             }
+        }
+
+        private void GererDepenses_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Colocation_CROUS
             // 
             this.lbColocataire.FormattingEnabled = true;
             this.lbColocataire.Location = new System.Drawing.Point(94, 84);
-            this.lbColocataire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbColocataire.Margin = new System.Windows.Forms.Padding(2);
             this.lbColocataire.Name = "lbColocataire";
             this.lbColocataire.Size = new System.Drawing.Size(414, 186);
             this.lbColocataire.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace Colocation_CROUS
             // btnajouter
             // 
             this.btnajouter.Location = new System.Drawing.Point(94, 293);
-            this.btnajouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnajouter.Margin = new System.Windows.Forms.Padding(2);
             this.btnajouter.Name = "btnajouter";
             this.btnajouter.Size = new System.Drawing.Size(84, 30);
             this.btnajouter.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace Colocation_CROUS
             // btnsupprimer
             // 
             this.btnsupprimer.Location = new System.Drawing.Point(321, 292);
-            this.btnsupprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsupprimer.Margin = new System.Windows.Forms.Padding(2);
             this.btnsupprimer.Name = "btnsupprimer";
             this.btnsupprimer.Size = new System.Drawing.Size(84, 30);
             this.btnsupprimer.TabIndex = 2;
@@ -69,13 +69,12 @@ namespace Colocation_CROUS
             // btnmodifier
             // 
             this.btnmodifier.Location = new System.Drawing.Point(206, 292);
-            this.btnmodifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmodifier.Margin = new System.Windows.Forms.Padding(2);
             this.btnmodifier.Name = "btnmodifier";
             this.btnmodifier.Size = new System.Drawing.Size(84, 30);
             this.btnmodifier.TabIndex = 3;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
-            
             // 
             // lblColocataire
             // 
@@ -108,9 +107,10 @@ namespace Colocation_CROUS
             this.Controls.Add(this.btnsupprimer);
             this.Controls.Add(this.btnajouter);
             this.Controls.Add(this.lbColocataire);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GererColocataire";
             this.Text = "Gerer Colocataire";
+            this.Load += new System.EventHandler(this.GererColocataire_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

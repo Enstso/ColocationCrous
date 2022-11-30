@@ -150,6 +150,7 @@ namespace Colocation_CROUS
             this.Controls.Add(this.lblId);
             this.Name = "FnouveauColocataire";
             this.Text = "FnouveauColocataire";
+            this.Load += new System.EventHandler(this.FnouveauColocataire_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,7 +40,7 @@ namespace Colocation_CROUS
             // btnSaisirDepense
             // 
             this.btnSaisirDepense.Location = new System.Drawing.Point(80, 269);
-            this.btnSaisirDepense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaisirDepense.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaisirDepense.Name = "btnSaisirDepense";
             this.btnSaisirDepense.Size = new System.Drawing.Size(89, 30);
             this.btnSaisirDepense.TabIndex = 1;
@@ -49,8 +49,8 @@ namespace Colocation_CROUS
             // 
             // btnModifierDepense
             // 
-            this.btnModifierDepense.Location = new System.Drawing.Point(188, 269);
-            this.btnModifierDepense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModifierDepense.Location = new System.Drawing.Point(189, 269);
+            this.btnModifierDepense.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifierDepense.Name = "btnModifierDepense";
             this.btnModifierDepense.Size = new System.Drawing.Size(104, 30);
             this.btnModifierDepense.TabIndex = 3;
@@ -59,8 +59,8 @@ namespace Colocation_CROUS
             // 
             // btnSupprimerDepense
             // 
-            this.btnSupprimerDepense.Location = new System.Drawing.Point(314, 269);
-            this.btnSupprimerDepense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSupprimerDepense.Location = new System.Drawing.Point(312, 269);
+            this.btnSupprimerDepense.Margin = new System.Windows.Forms.Padding(2);
             this.btnSupprimerDepense.Name = "btnSupprimerDepense";
             this.btnSupprimerDepense.Size = new System.Drawing.Size(106, 30);
             this.btnSupprimerDepense.TabIndex = 4;
@@ -81,8 +81,8 @@ namespace Colocation_CROUS
             // lbGererDepenses
             // 
             this.lbGererDepenses.FormattingEnabled = true;
-            this.lbGererDepenses.Location = new System.Drawing.Point(80, 102);
-            this.lbGererDepenses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbGererDepenses.Location = new System.Drawing.Point(80, 130);
+            this.lbGererDepenses.Margin = new System.Windows.Forms.Padding(2);
             this.lbGererDepenses.Name = "lbGererDepenses";
             this.lbGererDepenses.Size = new System.Drawing.Size(435, 134);
             this.lbGererDepenses.TabIndex = 6;
@@ -107,9 +107,10 @@ namespace Colocation_CROUS
             this.Controls.Add(this.btnSupprimerDepense);
             this.Controls.Add(this.btnModifierDepense);
             this.Controls.Add(this.btnSaisirDepense);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GererDepenses";
             this.Text = "GererDepenses";
+            this.Load += new System.EventHandler(this.GererDepenses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

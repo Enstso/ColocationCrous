@@ -8,7 +8,7 @@ namespace Model
 {
     class DepensesNonReparties
     {
-        public DepensesNonReparties(int id, DateTime date, string text, string justificatif, decimal montant, bool reparti , State state)
+        public DepensesNonReparties(int id, DateTime date, string texte, string justificatif, decimal montant, bool reparti , State state)
         { 
 
         }

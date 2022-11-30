@@ -69,5 +69,10 @@ namespace Colocation_CROUS
                 lbColocataire.Items.Add(coloc);
             }
         }
+
+        private void GererColocataire_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
