@@ -10,11 +10,11 @@ namespace Dao
 {
    public class DaoDepense
     {
-        public void SaveChanges(List<Depenses> depenses)
+        public void SaveChanges(List<Depense> depenses)
         {
             for (int i = 0; i < depenses.Count; i++)
             {
-                Depenses depense = depenses[i];
+                Depense depense = depenses[i];
                 switch (depense.State)
                 {
                     case State.added:
@@ -31,9 +31,31 @@ namespace Dao
             }
 
         }
-        public List<Depenses> GetAll(int idColoc)
+        public List<Depense> GetAll()
         {
-            List<Depenses> depenses = new List<Depenses>();
+            List<Depense> depenses = new List<Depense>();
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("select id,ladate,texte,justificatif,montant,reparti,idColoc from depense;", cnx))
+                {
+                    using (MySqlDataReader rdr = cmd.ExecuteReader())
+                    {
+
+                        while (rdr.Read())
+                        {
+                            depenses.Add(new Depense(Convert.ToInt32(rdr["id"]), Convert.ToDateTime(rdr["ladate"]), rdr["texte"].ToString(), rdr["justificatif"].ToString(), Convert.ToDecimal(rdr["montant"]), Convert.ToBoolean(rdr["reparti"]), Convert.ToInt32(rdr["idColoc"]), State.unChanged));
+                        }
+                    }
+                }
+                cnx.Close();
+            }
+            return depenses;
+        }
+
+        public List<Depense> GetAllByIdColoc(int idColoc)
+        {
+            List<Depense> depenses = new List<Depense>();
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
@@ -45,7 +67,7 @@ namespace Dao
 
                         while (rdr.Read())
                         {
-                            depenses.Add(new Depenses(Convert.ToInt32(rdr["id"]), Convert.ToDateTime(rdr["ladate"]), rdr["texte"].ToString(), rdr["justificatif"].ToString(), Convert.ToDecimal(rdr["montant"]), Convert.ToBoolean(rdr["reparti"]), Convert.ToInt32(rdr["idColoc"]), State.unChanged));
+                            depenses.Add(new Depense(Convert.ToInt32(rdr["id"]), Convert.ToDateTime(rdr["ladate"]), rdr["texte"].ToString(), rdr["justificatif"].ToString(), Convert.ToDecimal(rdr["montant"]), Convert.ToBoolean(rdr["reparti"]), Convert.ToInt32(rdr["idColoc"]), State.unChanged));
                         }
                     }
                 }
@@ -53,7 +75,9 @@ namespace Dao
             }
             return depenses;
         }
-            private void delete(Depenses depense)
+
+
+        private void delete(Depense depense)
             {
                 using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
                 {
@@ -66,7 +90,7 @@ namespace Dao
                     }
                 }
             }
-            private void update(Depenses depense)
+            private void update(Depense depense)
             {
                 using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
                 {
@@ -87,7 +111,7 @@ namespace Dao
                 }
                 depense.State = State.unChanged;
             }
-            private void insert(Depenses depense)
+            private void insert(Depense depense)
             {
                 using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
                 {

@@ -24,3 +24,6 @@ CREATE TABLE Depense(
 	);
 	
 
+insert into Colocataire(nom,prenom,mail,telephone)values("Nom","Prenom","mail@mail.com","0601020304");
+
+insert into Depense(ladate,justificatif,montant,reparti,idColoc)values('1955/06/27 00:00:00',"gege",200.00,True,1);

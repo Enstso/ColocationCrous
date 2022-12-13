@@ -108,3 +108,5 @@ C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\MySql
 C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
 C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
 C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FNouvelleDepense.resources

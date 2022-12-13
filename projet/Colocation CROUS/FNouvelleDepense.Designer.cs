@@ -34,14 +34,13 @@ namespace Colocation_CROUS
             this.lblTexte = new System.Windows.Forms.Label();
             this.lblJustificatif = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
-            this.btnReparti = new System.Windows.Forms.Label();
             this.tbDate = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbMontant = new System.Windows.Forms.TextBox();
             this.tbTexte = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbJustificatif = new System.Windows.Forms.PictureBox();
             this.cbidColoc = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cbxReparti = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJustificatif)).BeginInit();
             this.SuspendLayout();
             // 
             // btnValider
@@ -89,15 +88,6 @@ namespace Colocation_CROUS
             this.lblMontant.TabIndex = 4;
             this.lblMontant.Text = "Montant :";
             // 
-            // btnReparti
-            // 
-            this.btnReparti.AutoSize = true;
-            this.btnReparti.Location = new System.Drawing.Point(30, 231);
-            this.btnReparti.Name = "btnReparti";
-            this.btnReparti.Size = new System.Drawing.Size(47, 13);
-            this.btnReparti.TabIndex = 5;
-            this.btnReparti.Text = "Reparti :";
-            // 
             // tbDate
             // 
             this.tbDate.Location = new System.Drawing.Point(98, 101);
@@ -106,12 +96,12 @@ namespace Colocation_CROUS
             this.tbDate.TabIndex = 6;
             this.tbDate.TextChanged += new System.EventHandler(this.tbDate_TextChanged);
             // 
-            // textBox3
+            // tbMontant
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.tbMontant.Location = new System.Drawing.Point(98, 180);
+            this.tbMontant.Name = "tbMontant";
+            this.tbMontant.Size = new System.Drawing.Size(100, 20);
+            this.tbMontant.TabIndex = 8;
             // 
             // tbTexte
             // 
@@ -120,20 +110,13 @@ namespace Colocation_CROUS
             this.tbTexte.Size = new System.Drawing.Size(100, 20);
             this.tbTexte.TabIndex = 9;
             // 
-            // textBox5
+            // pbJustificatif
             // 
-            this.textBox5.Location = new System.Drawing.Point(98, 228);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(267, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 142);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.pbJustificatif.Location = new System.Drawing.Point(267, 106);
+            this.pbJustificatif.Name = "pbJustificatif";
+            this.pbJustificatif.Size = new System.Drawing.Size(144, 142);
+            this.pbJustificatif.TabIndex = 11;
+            this.pbJustificatif.TabStop = false;
             // 
             // cbidColoc
             // 
@@ -144,18 +127,28 @@ namespace Colocation_CROUS
             this.cbidColoc.TabIndex = 12;
             this.cbidColoc.SelectedIndexChanged += new System.EventHandler(this.cbidColoc_SelectedIndexChanged);
             // 
+            // cbxReparti
+            // 
+            this.cbxReparti.AutoSize = true;
+            this.cbxReparti.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxReparti.Location = new System.Drawing.Point(28, 231);
+            this.cbxReparti.Name = "cbxReparti";
+            this.cbxReparti.Size = new System.Drawing.Size(60, 17);
+            this.cbxReparti.TabIndex = 13;
+            this.cbxReparti.Text = "Reparti";
+            this.cbxReparti.UseVisualStyleBackColor = true;
+            // 
             // FNouvelleDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 379);
+            this.Controls.Add(this.cbxReparti);
             this.Controls.Add(this.cbidColoc);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.pbJustificatif);
             this.Controls.Add(this.tbTexte);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbMontant);
             this.Controls.Add(this.tbDate);
-            this.Controls.Add(this.btnReparti);
             this.Controls.Add(this.lblMontant);
             this.Controls.Add(this.lblJustificatif);
             this.Controls.Add(this.lblTexte);
@@ -164,7 +157,7 @@ namespace Colocation_CROUS
             this.Name = "FNouvelleDepense";
             this.Text = "FNouvelleDepense";
             this.Load += new System.EventHandler(this.FNouvelleDepense_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJustificatif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,12 +170,11 @@ namespace Colocation_CROUS
         private System.Windows.Forms.Label lblTexte;
         private System.Windows.Forms.Label lblJustificatif;
         private System.Windows.Forms.Label lblMontant;
-        private System.Windows.Forms.Label btnReparti;
         private System.Windows.Forms.TextBox tbDate;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbMontant;
         private System.Windows.Forms.TextBox tbTexte;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbJustificatif;
         private System.Windows.Forms.ComboBox cbidColoc;
+        private System.Windows.Forms.CheckBox cbxReparti;
     }
 }

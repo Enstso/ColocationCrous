@@ -15,7 +15,7 @@ namespace Colocation_CROUS
         public Form1()
         {
             InitializeComponent();
-            DaoConnectionSingleton.SetStringConnection("root", "siojjr", "localhost", "dbCrous");
+            DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbCrous");
         }
 
         private void btnGererColoc_Click(object sender, EventArgs e)
