@@ -24,6 +24,10 @@ namespace Model
             this.state = state;
         }
 
+        public override string ToString()
+        {
+            return string.Format("{0} {1} {2} {3}", this.nom, this.prenom, this.mail, this.telephone);
+        }
         public int Id
         {
             get

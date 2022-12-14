@@ -24,7 +24,8 @@ namespace Colocation_CROUS
             this.id = id;
             this.cbidColoc.SelectedIndexChanged += CbidColoc_SelectedIndexChanged;
             this.btnValider.Click += BtnValider_Click;
-
+            this.btnChoisir.Click += BtnChoisir_Click;
+            
             switch (state)
             {
                 case State.added:
@@ -39,9 +40,8 @@ namespace Colocation_CROUS
                     break;
                 case State.modified:
                     this.Text = "Modification d'une dépense";
-                    this.tbDate.Text = ((Depense)items[id]).Date.ToString();
+                    this.dtpDate.Value = ((Depense)items[id]).Date;
                     this.tbTexte.Text = ((Depense)items[id]).Texte;
-                    this.cbxReparti.Checked = ((Depense)items[id]).Reparti;
                     this.tbMontant.Text = ((Depense)items[id]).Montant.ToString();
                     this.cbidColoc.Enabled = false;
                     // à Modifier 
@@ -59,6 +59,16 @@ namespace Colocation_CROUS
 
         }
 
+        private void BtnChoisir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Title = "Choissez un justificatif";
+            file.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png*.pdf)|*.BMP;*.JPG;*.JPEG;*.PNG;*.PDF";
+            if (file.ShowDialog() == DialogResult.OK) {
+                this.pbJustificatif.ImageLocation = file.FileName;
+            }
+        }
+
         private void CbidColoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int id = cbidColoc.SelectedIndex;
@@ -71,16 +81,16 @@ namespace Colocation_CROUS
             switch (this.state)
             {
                 case State.added :
-                    items.Add(new Depense(Convert.ToDateTime(tbDate.Text),tbTexte.Text, pbJustificatif.ImageLocation, Convert.ToDecimal(tbMontant.Text),cbxReparti.Checked,id,this.state));
+                    items.Add(new Depense(dtpDate.Value,tbTexte.Text, pbJustificatif.ImageLocation, Convert.ToDecimal(tbMontant.Text),id,this.state));
                     this.Close();
                     break;
                 case State.modified:
                     Depense modifiedDepense = (Depense)items[this.id];
                     modifiedDepense.State = state;
-                    modifiedDepense.Date = Convert.ToDateTime(tbDate.Text);
+                    modifiedDepense.Date = dtpDate.Value;
                     modifiedDepense.Texte = tbTexte.Text;
                     modifiedDepense.Justificatif = pbJustificatif.ImageLocation;
-                    modifiedDepense.Reparti = cbxReparti.Checked;
+                    modifiedDepense.Reparti = false;
                     modifiedDepense.Montant = Convert.ToDecimal(tbMontant.Text);
                     this.Close();
                     break;

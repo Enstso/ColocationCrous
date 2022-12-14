@@ -29,13 +29,13 @@ namespace Model
             this.state = state;
             this.idColoc = idColoc;
         }
-        public Depense( DateTime date, string texte, string justificatif, decimal montant, bool reparti, int idColoc, State state)
+        public Depense( DateTime date, string texte, string justificatif, decimal montant, int idColoc, State state)
         {
             this.date = date;
             this.texte = texte;
             this.justificatif = justificatif;
             this.montant = montant;
-            this.reparti = reparti;
+            this.reparti = false;
             this.state = state;
             this.idColoc = idColoc;
         }
@@ -54,6 +54,10 @@ namespace Model
             this.state = State.deleted;
         }
 
+        public override string ToString()
+        {
+            return string.Format("La dépense n° {0} {1} {2} {3} {4}€ {5}",this.id,this.date,this.texte,this.justificatif,this.montant,this.idColoc);
+        }
 
 
     }

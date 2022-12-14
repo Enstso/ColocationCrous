@@ -34,12 +34,12 @@ namespace Colocation_CROUS
             this.lblTexte = new System.Windows.Forms.Label();
             this.lblJustificatif = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
-            this.tbDate = new System.Windows.Forms.TextBox();
             this.tbMontant = new System.Windows.Forms.TextBox();
             this.tbTexte = new System.Windows.Forms.TextBox();
             this.pbJustificatif = new System.Windows.Forms.PictureBox();
             this.cbidColoc = new System.Windows.Forms.ComboBox();
-            this.cbxReparti = new System.Windows.Forms.CheckBox();
+            this.btnChoisir = new System.Windows.Forms.Button();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbJustificatif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@ namespace Colocation_CROUS
             // lblTexte
             // 
             this.lblTexte.AutoSize = true;
-            this.lblTexte.Location = new System.Drawing.Point(25, 137);
+            this.lblTexte.Location = new System.Drawing.Point(25, 152);
             this.lblTexte.Name = "lblTexte";
             this.lblTexte.Size = new System.Drawing.Size(40, 13);
             this.lblTexte.TabIndex = 2;
@@ -73,82 +73,81 @@ namespace Colocation_CROUS
             // lblJustificatif
             // 
             this.lblJustificatif.AutoSize = true;
-            this.lblJustificatif.Location = new System.Drawing.Point(292, 58);
+            this.lblJustificatif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJustificatif.Location = new System.Drawing.Point(314, 66);
             this.lblJustificatif.Name = "lblJustificatif";
-            this.lblJustificatif.Size = new System.Drawing.Size(59, 13);
+            this.lblJustificatif.Size = new System.Drawing.Size(105, 24);
             this.lblJustificatif.TabIndex = 3;
-            this.lblJustificatif.Text = "Justificatif :";
+            this.lblJustificatif.Text = "Justificatif ";
             // 
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(25, 187);
+            this.lblMontant.Location = new System.Drawing.Point(25, 199);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(52, 13);
             this.lblMontant.TabIndex = 4;
             this.lblMontant.Text = "Montant :";
             // 
-            // tbDate
-            // 
-            this.tbDate.Location = new System.Drawing.Point(98, 101);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(100, 20);
-            this.tbDate.TabIndex = 6;
-            this.tbDate.TextChanged += new System.EventHandler(this.tbDate_TextChanged);
-            // 
             // tbMontant
             // 
-            this.tbMontant.Location = new System.Drawing.Point(98, 180);
+            this.tbMontant.Location = new System.Drawing.Point(98, 199);
             this.tbMontant.Name = "tbMontant";
             this.tbMontant.Size = new System.Drawing.Size(100, 20);
             this.tbMontant.TabIndex = 8;
             // 
             // tbTexte
             // 
-            this.tbTexte.Location = new System.Drawing.Point(98, 137);
+            this.tbTexte.Location = new System.Drawing.Point(98, 149);
             this.tbTexte.Name = "tbTexte";
             this.tbTexte.Size = new System.Drawing.Size(100, 20);
             this.tbTexte.TabIndex = 9;
             // 
             // pbJustificatif
             // 
-            this.pbJustificatif.Location = new System.Drawing.Point(267, 106);
+            this.pbJustificatif.Location = new System.Drawing.Point(292, 101);
             this.pbJustificatif.Name = "pbJustificatif";
-            this.pbJustificatif.Size = new System.Drawing.Size(144, 142);
+            this.pbJustificatif.Size = new System.Drawing.Size(166, 142);
+            this.pbJustificatif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbJustificatif.TabIndex = 11;
             this.pbJustificatif.TabStop = false;
             // 
             // cbidColoc
             // 
             this.cbidColoc.FormattingEnabled = true;
-            this.cbidColoc.Location = new System.Drawing.Point(77, 36);
+            this.cbidColoc.Location = new System.Drawing.Point(67, 49);
             this.cbidColoc.Name = "cbidColoc";
             this.cbidColoc.Size = new System.Drawing.Size(121, 21);
             this.cbidColoc.TabIndex = 12;
             this.cbidColoc.SelectedIndexChanged += new System.EventHandler(this.cbidColoc_SelectedIndexChanged);
             // 
-            // cbxReparti
+            // btnChoisir
             // 
-            this.cbxReparti.AutoSize = true;
-            this.cbxReparti.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbxReparti.Location = new System.Drawing.Point(28, 231);
-            this.cbxReparti.Name = "cbxReparti";
-            this.cbxReparti.Size = new System.Drawing.Size(60, 17);
-            this.cbxReparti.TabIndex = 13;
-            this.cbxReparti.Text = "Reparti";
-            this.cbxReparti.UseVisualStyleBackColor = true;
+            this.btnChoisir.Location = new System.Drawing.Point(344, 266);
+            this.btnChoisir.Name = "btnChoisir";
+            this.btnChoisir.Size = new System.Drawing.Size(75, 23);
+            this.btnChoisir.TabIndex = 14;
+            this.btnChoisir.Text = "Choisir";
+            this.btnChoisir.UseVisualStyleBackColor = true;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(67, 101);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.TabIndex = 15;
             // 
             // FNouvelleDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 379);
-            this.Controls.Add(this.cbxReparti);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.btnChoisir);
             this.Controls.Add(this.cbidColoc);
             this.Controls.Add(this.pbJustificatif);
             this.Controls.Add(this.tbTexte);
             this.Controls.Add(this.tbMontant);
-            this.Controls.Add(this.tbDate);
             this.Controls.Add(this.lblMontant);
             this.Controls.Add(this.lblJustificatif);
             this.Controls.Add(this.lblTexte);
@@ -170,11 +169,11 @@ namespace Colocation_CROUS
         private System.Windows.Forms.Label lblTexte;
         private System.Windows.Forms.Label lblJustificatif;
         private System.Windows.Forms.Label lblMontant;
-        private System.Windows.Forms.TextBox tbDate;
         private System.Windows.Forms.TextBox tbMontant;
         private System.Windows.Forms.TextBox tbTexte;
         private System.Windows.Forms.PictureBox pbJustificatif;
         private System.Windows.Forms.ComboBox cbidColoc;
-        private System.Windows.Forms.CheckBox cbxReparti;
+        private System.Windows.Forms.Button btnChoisir;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }
