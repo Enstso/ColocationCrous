@@ -56,7 +56,7 @@ namespace Model
 
         public override string ToString()
         {
-            return string.Format("La dépense n° {0} {1} {2} {3} {4}€ {5}",this.id,this.date,this.texte,this.justificatif,this.montant,this.idColoc);
+            return string.Format("La dépense n° {0} {1} {2} {3} {4}€ colocataire n°{5}",this.id,this.date,this.texte,this.justificatif,this.montant,this.idColoc);
         }
 
 

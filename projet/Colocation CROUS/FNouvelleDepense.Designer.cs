@@ -45,7 +45,7 @@ namespace Colocation_CROUS
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(185, 311);
+            this.btnValider.Location = new System.Drawing.Point(217, 328);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(97, 47);
             this.btnValider.TabIndex = 0;
@@ -74,7 +74,7 @@ namespace Colocation_CROUS
             // 
             this.lblJustificatif.AutoSize = true;
             this.lblJustificatif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJustificatif.Location = new System.Drawing.Point(314, 66);
+            this.lblJustificatif.Location = new System.Drawing.Point(340, 65);
             this.lblJustificatif.Name = "lblJustificatif";
             this.lblJustificatif.Size = new System.Drawing.Size(105, 24);
             this.lblJustificatif.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace Colocation_CROUS
             // 
             // pbJustificatif
             // 
-            this.pbJustificatif.Location = new System.Drawing.Point(292, 101);
+            this.pbJustificatif.Location = new System.Drawing.Point(318, 101);
             this.pbJustificatif.Name = "pbJustificatif";
             this.pbJustificatif.Size = new System.Drawing.Size(166, 142);
             this.pbJustificatif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,15 +115,15 @@ namespace Colocation_CROUS
             // cbidColoc
             // 
             this.cbidColoc.FormattingEnabled = true;
-            this.cbidColoc.Location = new System.Drawing.Point(67, 49);
+            this.cbidColoc.Location = new System.Drawing.Point(67, 47);
             this.cbidColoc.Name = "cbidColoc";
-            this.cbidColoc.Size = new System.Drawing.Size(121, 21);
+            this.cbidColoc.Size = new System.Drawing.Size(215, 21);
             this.cbidColoc.TabIndex = 12;
             this.cbidColoc.SelectedIndexChanged += new System.EventHandler(this.cbidColoc_SelectedIndexChanged);
             // 
             // btnChoisir
             // 
-            this.btnChoisir.Location = new System.Drawing.Point(344, 266);
+            this.btnChoisir.Location = new System.Drawing.Point(370, 266);
             this.btnChoisir.Name = "btnChoisir";
             this.btnChoisir.Size = new System.Drawing.Size(75, 23);
             this.btnChoisir.TabIndex = 14;
@@ -141,7 +141,7 @@ namespace Colocation_CROUS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 379);
+            this.ClientSize = new System.Drawing.Size(576, 462);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.btnChoisir);
             this.Controls.Add(this.cbidColoc);

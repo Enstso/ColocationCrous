@@ -15,7 +15,7 @@ namespace Colocation_CROUS
         public Form1()
         {
             InitializeComponent();
-            DaoConnectionSingleton.SetStringConnection("root", "siojjr", "localhost", "dbCrous");
+            DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbCrous");
         }
 
         private void btnGererColoc_Click(object sender, EventArgs e)
@@ -30,10 +30,12 @@ namespace Colocation_CROUS
             n.Show();
         }
 
-        private void btnRepartirDepenses_Click(object sender, EventArgs e)
+        
+
+        private void btnSolderPeriode_Click(object sender, EventArgs e)
         {
-            RepartirDepense d = new RepartirDepense();
-            d.Show();
+            FsolderPeriode fsolderPeriode = new FsolderPeriode();
+            fsolderPeriode.Show();
         }
     }
 }

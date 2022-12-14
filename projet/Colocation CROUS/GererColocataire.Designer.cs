@@ -40,6 +40,7 @@ namespace Colocation_CROUS
             // lbColocataire
             // 
             this.lbColocataire.FormattingEnabled = true;
+            this.lbColocataire.HorizontalScrollbar = true;
             this.lbColocataire.Location = new System.Drawing.Point(94, 84);
             this.lbColocataire.Margin = new System.Windows.Forms.Padding(2);
             this.lbColocataire.Name = "lbColocataire";

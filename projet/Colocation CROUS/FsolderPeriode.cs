@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Colocation_CROUS
 {
-    public partial class SolderPeriode : Form
+    public partial class FsolderPeriode : Form
     {
-        public SolderPeriode()
+        public FsolderPeriode()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RepartirDepense FrepartirDepense = new RepartirDepense();
+            FrepartirDepense.Show();
         }
     }
 }

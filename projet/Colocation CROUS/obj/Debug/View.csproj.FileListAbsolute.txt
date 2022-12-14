@@ -111,3 +111,4 @@ C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Coloc
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.SuggestedBindingRedirects.cache
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FNouvelleDepense.resources
 C:\Users\ejanvier\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.SolderPeriode.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FsolderPeriode.resources

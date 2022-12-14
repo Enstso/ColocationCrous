@@ -81,6 +81,7 @@ namespace Colocation_CROUS
             // lbGererDepenses
             // 
             this.lbGererDepenses.FormattingEnabled = true;
+            this.lbGererDepenses.HorizontalScrollbar = true;
             this.lbGererDepenses.Location = new System.Drawing.Point(80, 130);
             this.lbGererDepenses.Margin = new System.Windows.Forms.Padding(2);
             this.lbGererDepenses.Name = "lbGererDepenses";

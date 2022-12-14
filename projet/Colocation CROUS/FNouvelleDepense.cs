@@ -34,7 +34,7 @@ namespace Colocation_CROUS
                     List<Colocataire> colocataires = colocataire.GetAll();
                     foreach (Colocataire coloc in colocataires)
                     {
-                        this.cbidColoc.Items.Add(coloc.Id);
+                        this.cbidColoc.Items.Add(coloc);
                     }
 
                     break;
@@ -72,8 +72,9 @@ namespace Colocation_CROUS
         private void CbidColoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             int id = cbidColoc.SelectedIndex;
-            int cbId = (int)this.cbidColoc.Items[id];
-            this.id = cbId;
+            Colocataire coloc = (Colocataire)this.cbidColoc.Items[id];
+            this.id = coloc.Id;
+
         }
 
         private void BtnValider_Click(object sender, EventArgs e)
