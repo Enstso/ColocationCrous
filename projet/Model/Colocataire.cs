@@ -116,7 +116,5 @@ namespace Model
         {
             this.state = State.deleted;
         }
-
-        
     }
 }

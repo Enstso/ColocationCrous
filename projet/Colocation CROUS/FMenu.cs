@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using Dao;
 namespace Colocation_CROUS
 {
-    public partial class Form1 : Form
+    public partial class FMenu : Form
     {
-        public Form1()
+        public FMenu()
         {
             InitializeComponent();
-            DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbCrous");
+            DaoConnectionSingleton.SetStringConnection("root", "siojjr", "localhost", "dbCrous");
         }
 
         private void btnGererColoc_Click(object sender, EventArgs e)

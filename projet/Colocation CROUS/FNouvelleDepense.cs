@@ -74,7 +74,6 @@ namespace Colocation_CROUS
             int id = cbidColoc.SelectedIndex;
             Colocataire coloc = (Colocataire)this.cbidColoc.Items[id];
             this.id = coloc.Id;
-
         }
 
         private void BtnValider_Click(object sender, EventArgs e)

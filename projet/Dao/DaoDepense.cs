@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Dao
 {
-   public class DaoDepense
+    public class DaoDepense
     {
         public void SaveChanges(List<Depense> depenses)
         {
@@ -25,7 +25,7 @@ namespace Dao
                         break;
                     case State.deleted:
                         this.delete(depense);
-                       depenses.Remove(depense);
+                        depenses.Remove(depense);
                         break;
                 }
             }
@@ -78,45 +78,46 @@ namespace Dao
 
 
         private void delete(Depense depense)
+        {
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
-                using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("delete from Depense where id=@id", cnx))
                 {
-                    cnx.Open();
-                    using (MySqlCommand cmd = new MySqlCommand("delete from Depense where id=@id", cnx))
-                    {
-                        cmd.Parameters.Add(new MySqlParameter("@id", depense.Id));
-                        
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-            private void update(Depense depense)
-            {
-                using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
-                {
-                    cnx.Open();
-                    using (MySqlCommand cmd = new MySqlCommand("Update Depense set texte=@texte ladate=@ladate,justificatif=@justificatif,montant=@montant,reparti=@reparti,idColoc=@idcoloc  where id=@id", cnx))
-                    {
-                        cmd.Parameters.Add(new MySqlParameter("@id",depense.Id));
-                        cmd.Parameters.Add(new MySqlParameter("@texte", depense.Texte));
-                        cmd.Parameters.Add(new MySqlParameter("@ladate", depense.Date));
-                        cmd.Parameters.Add(new MySqlParameter("@justificatif", depense.Justificatif));
-                        cmd.Parameters.Add(new MySqlParameter("@montant", depense.Montant));
-                        cmd.Parameters.Add(new MySqlParameter("@reparti", depense.Reparti));
-                        cmd.Parameters.Add(new MySqlParameter("@idColoc", depense.IdColoc));
+                    cmd.Parameters.Add(new MySqlParameter("@id", depense.Id));
 
                     cmd.ExecuteNonQuery();
-                    }
-                    cnx.Close();
                 }
-                depense.State = State.unChanged;
             }
-            private void insert(Depense depense)
+        }
+        private void update(Depense depense)
+        {
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
-                using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("Update Depense set texte=@texte ladate=@ladate,justificatif=@justificatif,montant=@montant,reparti=@reparti,idColoc=@idcoloc  where id=@id", cnx))
                 {
-                    cnx.Open();
-                    using (MySqlCommand cmd = new MySqlCommand("insert into Depense(ladate,texte,justificatif,montant,reparti,idColoc) values(@ladate,@texte,@justificatif,@montant,@reparti,@idColoc)", cnx))
+                    cmd.Parameters.Add(new MySqlParameter("@id", depense.Id));
+                    cmd.Parameters.Add(new MySqlParameter("@texte", depense.Texte));
+                    cmd.Parameters.Add(new MySqlParameter("@ladate", depense.Date));
+                    cmd.Parameters.Add(new MySqlParameter("@justificatif", depense.Justificatif));
+                    cmd.Parameters.Add(new MySqlParameter("@montant", depense.Montant));
+                    cmd.Parameters.Add(new MySqlParameter("@reparti", depense.Reparti));
+                    cmd.Parameters.Add(new MySqlParameter("@idColoc", depense.IdColoc));
+
+                    cmd.ExecuteNonQuery();
+                }
+                cnx.Close();
+            }
+            depense.State = State.unChanged;
+        }
+
+        private void insert(Depense depense)
+        {
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("insert into Depense(ladate,texte,justificatif,montant,reparti,idColoc) values(@ladate,@texte,@justificatif,@montant,@reparti,@idColoc)", cnx))
                 {
                     cmd.Parameters.Add(new MySqlParameter("@texte", depense.Texte));
                     cmd.Parameters.Add(new MySqlParameter("@ladate", depense.Date));
@@ -125,11 +126,63 @@ namespace Dao
                     cmd.Parameters.Add(new MySqlParameter("@reparti", depense.Reparti));
                     cmd.Parameters.Add(new MySqlParameter("@idColoc", depense.IdColoc));
                     cmd.ExecuteNonQuery();
-                        // Todo coder la récupération de LastId                     
+                    // Todo coder la récupération de LastId                     
+                }
+            }
+            depense.State = State.unChanged;
+        }
+
+        public bool toutEstReparti()
+        {
+            List<bool> liste = new List<bool>();
+            bool res=true;
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("select reparti from depense", cnx))
+                {
+                    MySqlDataReader rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        liste.Add(Convert.ToBoolean(rdr["reparti"]));
+                    }
+                    rdr.Close();
+                }
+                cnx.Close();
+                
+            }
+            for(int i= 0; i < liste.Count; i++)
+            {
+                if (liste[i] == false)
+                {
+                    res = false;
+                    break;
+                }
+            }
+            return res;
+        }
+
+        public List<Depense> GetDepenseNonReparti()
+        {
+            List<Depense> depenses = new List<Depense>();
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("select id,ladate,texte,justificatif,montant,reparti,idColoc from depense where reparti=false;", cnx))
+                {
+                    using (MySqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            depenses.Add(new Depense(Convert.ToInt32(rdr["id"]), Convert.ToDateTime(rdr["ladate"]), rdr["texte"].ToString(), rdr["justificatif"].ToString(), Convert.ToDecimal(rdr["montant"]), Convert.ToBoolean(rdr["reparti"]), Convert.ToInt32(rdr["idColoc"]), State.unChanged));
+                        }
+                        rdr.Close();
                     }
                 }
-                depense.State = State.unChanged;
+                cnx.Close();
             }
+            return depenses;
         }
     }
+}
 
