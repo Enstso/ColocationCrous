@@ -180,3 +180,37 @@ C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Colocation CROUS\obj\Deb
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe.config
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Model.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Google.Protobuf.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\ZstdNet.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\System.Memory.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\System.Buffers.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.pdb
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\Model.pdb
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.xml
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe.config
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FMain.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FnouveauColocataire.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FNouvelleDepense.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FsolderPeriode.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererColocataire.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererDepenses.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Properties.Resources.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb

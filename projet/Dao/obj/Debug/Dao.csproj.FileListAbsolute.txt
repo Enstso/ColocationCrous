@@ -102,3 +102,7 @@ C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj.CopyComplete
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Dao\obj\Debug\Dao.dll
 C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Dao\obj\Debug\Dao.pdb
+C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj.AssemblyReference.cache
+C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
+C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.dll
+C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.pdb

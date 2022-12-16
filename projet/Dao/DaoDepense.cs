@@ -200,9 +200,18 @@ namespace Dao
             return resultat;
         }
 
-        public void UpdateReparti()
+        public void UpdateReparti(int id)
         {
-
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("update depense set reparti=1 where id=@id;", cnx))
+                {
+                    cmd.Parameters.Add(new MySqlParameter("@id", id));
+                    cmd.ExecuteNonQuery();
+                }
+                cnx.Close();
+            }
         }
     }
 }

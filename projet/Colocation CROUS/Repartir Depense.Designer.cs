@@ -41,7 +41,7 @@ namespace Colocation_CROUS
             this.lbDepense.HorizontalScrollbar = true;
             this.lbDepense.ItemHeight = 16;
             this.lbDepense.Location = new System.Drawing.Point(92, 136);
-            this.lbDepense.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbDepense.Margin = new System.Windows.Forms.Padding(4);
             this.lbDepense.Name = "lbDepense";
             this.lbDepense.ScrollAlwaysVisible = true;
             this.lbDepense.Size = new System.Drawing.Size(475, 196);
@@ -60,8 +60,8 @@ namespace Colocation_CROUS
             // 
             // btnRepartir
             // 
-            this.btnRepartir.Location = new System.Drawing.Point(524, 386);
-            this.btnRepartir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRepartir.Location = new System.Drawing.Point(524, 373);
+            this.btnRepartir.Margin = new System.Windows.Forms.Padding(4);
             this.btnRepartir.Name = "btnRepartir";
             this.btnRepartir.Size = new System.Drawing.Size(135, 37);
             this.btnRepartir.TabIndex = 3;

@@ -20,6 +20,7 @@ namespace Colocation_CROUS
             this.loadDepenseNonReparti();
         }
 
+
         public void loadDepenseNonReparti()
         {
             List<Depense> d = new List<Depense>();
@@ -35,13 +36,17 @@ namespace Colocation_CROUS
         {
             DaoDepense daoDepense = new DaoDepense();
             DaoColocataire daoColoc = new DaoColocataire();
+
             decimal total = 0;
             decimal resultat = 0;
+
             List<Colocataire> colocataires = daoColoc.GetAll();
             List<Depense> depensesNonReparti = daoDepense.GetDepenseNonReparti();
+
             foreach(Depense depense in depensesNonReparti)
             {
                 total += depense.Montant;
+                daoDepense.UpdateReparti(depense.Id);
             }
             decimal doit = total / colocataires.Count;
 
@@ -54,7 +59,6 @@ namespace Colocation_CROUS
                 }
                 lbDoitCombien.Items.Add(coloc.Afficher(coloc.Nom,resultat));
             }
-
         }
     }
 }

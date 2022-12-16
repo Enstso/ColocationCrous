@@ -20,7 +20,7 @@ namespace Colocation_CROUS
             this.btnGererColoc.Click += BtnGererColoc_Click;
             this.btnGererDepense.Click += BtnGererDepense_Click;
             this.btnSolderPeriode.Click += BtnSolderPeriode_Click;
-            DaoConnectionSingleton.SetStringConnection("root", "siojjr", "localhost", "dbCrous");
+            DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbcrous");
         }
 
         private void BtnSolderPeriode_Click(object sender, EventArgs e)
