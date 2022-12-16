@@ -183,6 +183,27 @@ namespace Dao
             }
             return depenses;
         }
+
+        public decimal GetDepenseByColoc(int id)
+        {
+            decimal resultat;
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("select sum(montant) from depense where idColoc=@id and reparti = false;", cnx))
+                {
+                    cmd.Parameters.Add(new MySqlParameter("@id",id));
+                    resultat = Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+                cnx.Close();
+            }
+            return resultat;
+        }
+
+        public void UpdateReparti()
+        {
+
+        }
     }
 }
 

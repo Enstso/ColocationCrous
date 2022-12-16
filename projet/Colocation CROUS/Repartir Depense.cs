@@ -33,26 +33,28 @@ namespace Colocation_CROUS
 
         private void btnRepartir_Click(object sender, EventArgs e)
         {
-            List<Depense> d = new List<Depense>();
-
-            Dictionary<string, decimal> dict= new Dictionary<string, decimal>();
-
-            List<Colocataire> c = new List<Colocataire>();
-            List<decimal> montants = new List<decimal>();
+            DaoDepense daoDepense = new DaoDepense();
+            DaoColocataire daoColoc = new DaoColocataire();
             decimal total = 0;
-            decimal doit = 0;
-            DaoDepense dao = new DaoDepense();
-            DaoColocataire daoC = new DaoColocataire();
-            c = daoC.GetAll();
-            d = dao.GetDepenseNonReparti();
-            //for (int i = 0;i<)
-            foreach (Depense depense in d)
+            decimal resultat = 0;
+            List<Colocataire> colocataires = daoColoc.GetAll();
+            List<Depense> depensesNonReparti = daoDepense.GetDepenseNonReparti();
+            foreach(Depense depense in depensesNonReparti)
             {
-                montants.Add(depense.Montant);
                 total += depense.Montant;
-                //dict.Add()
             }
-            doit = total / c.Count();
+            decimal doit = total / colocataires.Count;
+
+            foreach(Colocataire coloc in colocataires)
+            {
+                resultat = doit - daoDepense.GetDepenseByColoc(coloc.Id);
+                if (resultat < 0)
+                {
+                    resultat = 0;
+                }
+                lbDoitCombien.Items.Add(coloc.Afficher(coloc.Nom,resultat));
+            }
+
         }
     }
 }

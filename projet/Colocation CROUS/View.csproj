@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FnouveauColocataire.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +78,6 @@
     <Compile Include="GererColocataire.Designer.cs">
       <DependentUpon>GererColocataire.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="GererDepenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +92,9 @@
     <Compile Include="Repartir Depense.Designer.cs">
       <DependentUpon>Repartir Depense.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FnouveauColocataire.resx">
       <DependentUpon>FnouveauColocataire.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,9 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GererColocataire.resx">
       <DependentUpon>GererColocataire.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GererDepenses.resx">
       <DependentUpon>GererDepenses.cs</DependentUpon>

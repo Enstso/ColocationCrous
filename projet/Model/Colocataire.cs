@@ -116,5 +116,10 @@ namespace Model
         {
             this.state = State.deleted;
         }
+
+        public string Afficher(string nom, decimal montant)
+        {
+            return string.Format("{0} : {1}", nom, montant);
+        }
     }
 }

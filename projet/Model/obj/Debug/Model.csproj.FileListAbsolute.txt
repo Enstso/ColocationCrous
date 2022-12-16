@@ -15,3 +15,9 @@ C:\Users\ejanvier\Documents\crous-projet\projet\Model\obj\Debug\Model.csproj.Cor
 C:\Users\ejanvier\Documents\crous-projet\projet\Model\obj\Debug\Model.dll
 C:\Users\ejanvier\Documents\crous-projet\projet\Model\obj\Debug\Model.pdb
 C:\Users\ejanvier\Documents\crous-projet\projet\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\bin\Debug\Model.dll
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\bin\Debug\Model.pdb
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\obj\Debug\Model.dll
+C:\Users\zmougaidinessaib\Documents\crous-projet\projet\Model\obj\Debug\Model.pdb
