@@ -129,6 +129,19 @@ namespace Dao
             }
             throw new Exception("id non défini pour la table Colocataire");
         }
+        public void ReinitialiserColocataires()
+        {
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("Truncate colocataire", cnx))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                cnx.Close();
+            }
+
+        }
     }
 }
 

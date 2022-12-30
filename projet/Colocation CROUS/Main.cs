@@ -16,7 +16,7 @@ namespace Colocation_CROUS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMain());
+            Application.Run(new Fmain());
         }
     }
 }

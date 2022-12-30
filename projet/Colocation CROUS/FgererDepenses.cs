@@ -12,27 +12,51 @@ using Model;
 
 namespace Colocation_CROUS
 {
-    public partial class GererDepenses : Form
+    public partial class FgererDepenses : Form
     {
-        public GererDepenses()
+        public FgererDepenses()
         {
             InitializeComponent();
             this.btnSaisirDepense.Click += BtnSaisirDepense_Click;
             this.btnModifierDepense.Click += BtnModifierDepense_Click;
             this.btnSupprimerDepense.Click += BtnSupprimerDepense_Click;
             this.btnSave.Click += BtnSave_Click;
+            this.btnReinitialiser.Click += BtnReinitialiser_Click;
             this.load(new DaoDepense().GetAll());
+        }
+
+        private void BtnReinitialiser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DaoDepense daoDepense = new DaoDepense();
+                daoDepense.ReinitialiserDepenses();
+                lbGererDepenses.Items.Clear();
+                MessageBox.Show("Les dépenses de l'application ont été supprimées");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            List<Depense> depenses = new List<Depense>();
-            foreach (object o in lbGererDepenses.Items)
+            try
             {
-                depenses.Add((Depense)o);
+                List<Depense> depenses = new List<Depense>();
+                foreach (object o in lbGererDepenses.Items)
+                {
+                    depenses.Add((Depense)o);
+                }
+                new DaoDepense().SaveChanges(depenses);
+                this.load(depenses);
+                MessageBox.Show("Enregistrement Valide");
             }
-            new DaoDepense().SaveChanges(depenses);
-            this.load(depenses);
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnSupprimerDepense_Click(object sender, EventArgs e)
@@ -54,7 +78,7 @@ namespace Colocation_CROUS
             try
             {
                 int position = lbGererDepenses.SelectedIndex;
-                FNouvelleDepense fNouvelleDepense = new FNouvelleDepense(State.modified, lbGererDepenses.Items,position);
+                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.modified, lbGererDepenses.Items,position);
                 fNouvelleDepense.Show();
             }
             catch(Exception ex)
@@ -67,7 +91,7 @@ namespace Colocation_CROUS
         {
             try
             {
-                FNouvelleDepense fNouvelleDepense = new FNouvelleDepense(State.added,lbGererDepenses.Items,0);
+                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.added,lbGererDepenses.Items,0);
                 fNouvelleDepense.Show();
             }
             catch(Exception ex)
@@ -78,16 +102,19 @@ namespace Colocation_CROUS
 
         public void load(List<Depense> depenses)
         {
-            lbGererDepenses.Items.Clear();
-            foreach (Depense depense in depenses)
+            try
             {
-                lbGererDepenses.Items.Add(depense);
+                lbGererDepenses.Items.Clear();
+                foreach (Depense depense in depenses)
+                {
+                    lbGererDepenses.Items.Add(depense);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void GererDepenses_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

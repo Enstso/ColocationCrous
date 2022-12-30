@@ -24,6 +24,8 @@ CREATE TABLE Depense(
 	);
 	
 
-insert into Colocataire(nom,prenom,mail,telephone)values("Nom","Prenom","mail@mail.com","0601020304");
+insert into Colocataire(nom,prenom,mail,telephone)values("Edwin","Perl","mail@mail.com","0601020304");
+insert into Colocataire(nom,prenom,mail,telephone)values("Nofa","grain","mamail.com","060105504");
+insert into Depense(ladate,justificatif,montant,reparti,idColoc)values('1955/06/27 00:00:00',"Pièce d'identité",200.00,False,1);
+insert into Depense(ladate,justificatif,montant,reparti,idColoc)values('1955/06/28 00:00:00',"Photo",100.00,False,2);
 
-insert into Depense(ladate,justificatif,montant,reparti,idColoc)values('1955/06/27 00:00:00',"gege",200.00,True,1);

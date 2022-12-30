@@ -117,16 +117,15 @@ namespace Dao
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
-                using (MySqlCommand cmd = new MySqlCommand("insert into Depense(ladate,texte,justificatif,montant,reparti,idColoc) values(@ladate,@texte,@justificatif,@montant,@reparti,@idColoc)", cnx))
+                using (MySqlCommand cmd = new MySqlCommand("insert into Depense(ladate,texte,justificatif,montant,reparti,idColoc) values(@ladate,@texte,@justificatif,@montant,False,@idColoc)", cnx))
                 {
                     cmd.Parameters.Add(new MySqlParameter("@texte", depense.Texte));
                     cmd.Parameters.Add(new MySqlParameter("@ladate", depense.Date));
                     cmd.Parameters.Add(new MySqlParameter("@justificatif", depense.Justificatif));
                     cmd.Parameters.Add(new MySqlParameter("@montant", depense.Montant));
-                    cmd.Parameters.Add(new MySqlParameter("@reparti", depense.Reparti));
                     cmd.Parameters.Add(new MySqlParameter("@idColoc", depense.IdColoc));
                     cmd.ExecuteNonQuery();
-                    // Todo coder la récupération de LastId                     
+                                      
                 }
             }
             depense.State = State.unChanged;
@@ -134,8 +133,8 @@ namespace Dao
 
         public bool toutEstReparti()
         {
-            List<bool> liste = new List<bool>();
-            bool res=true;
+            List<bool> repartitions = new List<bool>();
+            bool reparti=true;
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
@@ -144,22 +143,22 @@ namespace Dao
                     MySqlDataReader rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
-                        liste.Add(Convert.ToBoolean(rdr["reparti"]));
+                        repartitions.Add(Convert.ToBoolean(rdr["reparti"]));
                     }
                     rdr.Close();
                 }
                 cnx.Close();
                 
             }
-            for(int i= 0; i < liste.Count; i++)
+            for(int i= 0; i < repartitions.Count; i++)
             {
-                if (liste[i] == false)
+                if (repartitions[i] == false)
                 {
-                    res = false;
+                    reparti = false;
                     break;
                 }
             }
-            return res;
+            return reparti;
         }
 
         public List<Depense> GetDepenseNonReparti()
@@ -212,6 +211,20 @@ namespace Dao
                 }
                 cnx.Close();
             }
+        }
+
+        public void ReinitialiserDepenses()
+        {
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("Truncate depense", cnx))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                cnx.Close();
+            }
+
         }
     }
 }

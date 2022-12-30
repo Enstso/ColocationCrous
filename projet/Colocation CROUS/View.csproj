@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Colocation_CROUS</RootNamespace>
     <AssemblyName>Colocation CROUS</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FMain.cs">
+    <Compile Include="Fmain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FMain.Designer.cs">
-      <DependentUpon>FMain.cs</DependentUpon>
+    <Compile Include="Fmain.Designer.cs">
+      <DependentUpon>Fmain.cs</DependentUpon>
     </Compile>
     <Compile Include="FnouveauColocataire.cs">
       <SubType>Form</SubType>
@@ -60,11 +60,11 @@
     <Compile Include="FnouveauColocataire.Designer.cs">
       <DependentUpon>FnouveauColocataire.cs</DependentUpon>
     </Compile>
-    <Compile Include="FNouvelleDepense.cs">
+    <Compile Include="FnouvelleDepense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FNouvelleDepense.Designer.cs">
-      <DependentUpon>FNouvelleDepense.cs</DependentUpon>
+    <Compile Include="FnouvelleDepense.Designer.cs">
+      <DependentUpon>FnouvelleDepense.cs</DependentUpon>
     </Compile>
     <Compile Include="FsolderPeriode.cs">
       <SubType>Form</SubType>
@@ -72,43 +72,43 @@
     <Compile Include="FsolderPeriode.Designer.cs">
       <DependentUpon>FsolderPeriode.cs</DependentUpon>
     </Compile>
-    <Compile Include="GererColocataire.cs">
+    <Compile Include="FgererColocataire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GererColocataire.Designer.cs">
-      <DependentUpon>GererColocataire.cs</DependentUpon>
+    <Compile Include="FgererColocataire.Designer.cs">
+      <DependentUpon>FgererColocataire.cs</DependentUpon>
     </Compile>
-    <Compile Include="GererDepenses.cs">
+    <Compile Include="FgererDepenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GererDepenses.Designer.cs">
-      <DependentUpon>GererDepenses.cs</DependentUpon>
+    <Compile Include="FgererDepenses.Designer.cs">
+      <DependentUpon>FgererDepenses.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repartir Depense.cs">
+    <Compile Include="FrepartirDepense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Repartir Depense.Designer.cs">
-      <DependentUpon>Repartir Depense.cs</DependentUpon>
+    <Compile Include="FrepartirDepense.Designer.cs">
+      <DependentUpon>FrepartirDepense.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FMain.resx">
-      <DependentUpon>FMain.cs</DependentUpon>
+    <EmbeddedResource Include="Fmain.resx">
+      <DependentUpon>Fmain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FnouveauColocataire.resx">
       <DependentUpon>FnouveauColocataire.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FNouvelleDepense.resx">
-      <DependentUpon>FNouvelleDepense.cs</DependentUpon>
+    <EmbeddedResource Include="FnouvelleDepense.resx">
+      <DependentUpon>FnouvelleDepense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FsolderPeriode.resx">
       <DependentUpon>FsolderPeriode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GererColocataire.resx">
-      <DependentUpon>GererColocataire.cs</DependentUpon>
+    <EmbeddedResource Include="FgererColocataire.resx">
+      <DependentUpon>FgererColocataire.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GererDepenses.resx">
-      <DependentUpon>GererDepenses.cs</DependentUpon>
+    <EmbeddedResource Include="FgererDepenses.resx">
+      <DependentUpon>FgererDepenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,8 +120,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Repartir Depense.resx">
-      <DependentUpon>Repartir Depense.cs</DependentUpon>
+    <EmbeddedResource Include="FrepartirDepense.resx">
+      <DependentUpon>FrepartirDepense.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -146,6 +146,9 @@
       <Project>{4757b721-fcf7-4c6f-9c5b-81e6d4960989}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csm_logo-crous-versailles_6c2cc18e63.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

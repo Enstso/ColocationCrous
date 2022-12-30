@@ -11,12 +11,12 @@ using Dao;
 using Model;
 namespace Colocation_CROUS
 {
-    public partial class FNouvelleDepense : Form
+    public partial class FnouvelleDepense : Form
     {
         State state;
         int id;
         ListBox.ObjectCollection items;
-        public FNouvelleDepense(State state, ListBox.ObjectCollection items, int id)
+        public FnouvelleDepense(State state, ListBox.ObjectCollection items, int id)
         {
             InitializeComponent();
             this.state = state;
@@ -90,7 +90,6 @@ namespace Colocation_CROUS
                     modifiedDepense.Date = dtpDate.Value;
                     modifiedDepense.Texte = tbTexte.Text;
                     modifiedDepense.Justificatif = pbJustificatif.ImageLocation;
-                    modifiedDepense.Reparti = false;
                     modifiedDepense.Montant = Convert.ToDecimal(tbMontant.Text);
                     this.Close();
                     break;

@@ -18,24 +18,20 @@ namespace Colocation_CROUS
         public FsolderPeriode()
         {
             InitializeComponent();
+            DaoDepense dao = new DaoDepense();
+            if (dao.toutEstReparti())
+            {
+                this.btnLancerRepartition.Enabled = false;
+                this.lblRepartirDepense.Text = "Aucune dépense est à répartir";
+            }
             this.btnLancerRepartition.Click += BtnLancerRepartition_Click;
         }
 
         private void BtnLancerRepartition_Click(object sender, EventArgs e)
         {
-            DaoDepense dao = new DaoDepense();
-            if (dao.toutEstReparti())
-            {
-                this.btnLancerRepartition.Enabled = false;
-                MessageBox.Show("Aucune dépense est à répartir !");
-                //this.lblRepartirDepense.Text = "Aucune dépense est à répartir !";
-            }
-            else
-            {
                 RepartirDepense FrepartirDepense = new RepartirDepense();
                 FrepartirDepense.Show();
-            }
-            
+                this.Close();
         }
 
        

@@ -15,9 +15,6 @@ D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe.config
 D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe
 D:\C#\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.pdb
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.AssemblyReference.cache
-D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererColocataire.resources
-D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Form1.resources
-D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.GererDepenses.resources
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Properties.Resources.resources
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.GenerateResource.cache
@@ -214,3 +211,6 @@ C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.cs
 C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
 C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
 C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FMain.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererColocataire.resources
+D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererDepenses.resources

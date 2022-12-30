@@ -78,10 +78,5 @@ namespace Colocation_CROUS
             }
             this.Close();
         }
-
-        private void FnouveauColocataire_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
