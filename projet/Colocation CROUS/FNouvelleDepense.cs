@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dao;
@@ -22,10 +24,10 @@ namespace Colocation_CROUS
             this.state = state;
             this.items = items;
             this.id = id;
+            
             this.cbidColoc.SelectedIndexChanged += CbidColoc_SelectedIndexChanged;
             this.btnValider.Click += BtnValider_Click;
             this.btnChoisir.Click += BtnChoisir_Click;
-            
             switch (state)
             {
                 case State.added:
@@ -42,9 +44,8 @@ namespace Colocation_CROUS
                     this.Text = "Modification d'une dépense";
                     this.dtpDate.Value = ((Depense)items[id]).Date;
                     this.tbTexte.Text = ((Depense)items[id]).Texte;
-                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString();
+                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString("0.##"); 
                     this.cbidColoc.Enabled = false;
-                    // à Modifier 
                     this.pbJustificatif.ImageLocation = ((Depense)items[id]).Justificatif;
                     break;
                 case State.deleted:
@@ -59,12 +60,14 @@ namespace Colocation_CROUS
 
         }
 
+
         private void BtnChoisir_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
             file.Title = "Choissez un justificatif";
             file.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png*.pdf)|*.BMP;*.JPG;*.JPEG;*.PNG;*.PDF";
-            if (file.ShowDialog() == DialogResult.OK) {
+            if (file.ShowDialog() == DialogResult.OK)
+            {
                 this.pbJustificatif.ImageLocation = file.FileName;
             }
         }
@@ -80,18 +83,41 @@ namespace Colocation_CROUS
         {
             switch (this.state)
             {
-                case State.added :
-                    items.Add(new Depense(dtpDate.Value,tbTexte.Text, pbJustificatif.ImageLocation, Convert.ToDecimal(tbMontant.Text),id,this.state));
-                    this.Close();
+                case State.added:
+                    List<bool> list = new List<bool>();
+                    list.Add(Regexm(@"^[a-zA-Z]+$", this.pbValidation1, tbTexte));
+                    list.Add(Regexm(@"^[0-9]+$", this.pbValidation2, tbMontant));
+                    int test = Testvalidation(list);
+                    if (this.cbidColoc.SelectedItem != null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Choissisez un colocataire");
+                    }
+                    if (test == 3)
+                    {
+                        items.Add(new Depense(dtpDate.Value, tbTexte.Text, pbJustificatif.ImageLocation, Convert.ToDecimal(tbMontant.Text), id, this.state));
+                        this.Close();
+                    }
                     break;
                 case State.modified:
-                    Depense modifiedDepense = (Depense)items[this.id];
-                    modifiedDepense.State = state;
-                    modifiedDepense.Date = dtpDate.Value;
-                    modifiedDepense.Texte = tbTexte.Text;
-                    modifiedDepense.Justificatif = pbJustificatif.ImageLocation;
-                    modifiedDepense.Montant = Convert.ToDecimal(tbMontant.Text);
-                    this.Close();
+                    List<bool> list2 = new List<bool>();
+                    list2.Add(Regexm(@"^[a-zA-Z]+$", this.pbValidation1, tbTexte));
+                    list2.Add(Regexm(@"^[0-9]+$", this.pbValidation2, tbMontant));
+                    int test2 = Testvalidation(list2);
+                    if (test2 == 3)
+                    {
+                        Depense modifiedDepense = (Depense)items[this.id];
+                        modifiedDepense.State = this.state;
+                        modifiedDepense.Date = this.dtpDate.Value;
+                        modifiedDepense.Texte = this.tbTexte.Text;
+                        modifiedDepense.Justificatif = this.pbJustificatif.ImageLocation;
+                        modifiedDepense.Montant = Convert.ToDecimal(tbMontant.Text);
+                        this.items[this.id] = modifiedDepense;
+                        this.Close();
+                    }
                     break;
                 case State.deleted:
                     break;
@@ -102,21 +128,47 @@ namespace Colocation_CROUS
             }
         }
 
-        private void tbDate_TextChanged(object sender, EventArgs e)
+        public bool Regexm(string re, PictureBox pb, TextBox tb)
         {
-
+            bool valid = false;
+            Regex regex = new Regex(re);
+            if (regex.IsMatch(tb.Text))
+            {
+                pb.Image = Properties.Resources.valid;
+                valid = true;
+            }
+            else
+            {
+                pb.Image = Properties.Resources.invalid;
+            }
+            return valid;
         }
 
-        private void cbidColoc_SelectedIndexChanged(object sender, EventArgs e)
+        public int Testvalidation(List<bool> list)
         {
+            int compteur = 0;
+            foreach (bool elmt in list)
+            {
+                if (elmt == true)
+                {
+                    compteur = compteur + 1;
+                }
 
-        }
+            }
+            if(this.pbJustificatif.ImageLocation != null)
+            {
+                compteur = compteur + 1;
+            }
+            else
+            {
+                MessageBox.Show("Justificatif Obligatoire");
+            }
 
-        private void FNouvelleDepense_Load(object sender, EventArgs e)
-        {
-
+            return compteur;
         }
 
         
     }
+
 }
+

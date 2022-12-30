@@ -52,10 +52,10 @@
             // 
             this.btnLancerRepartition.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLancerRepartition.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLancerRepartition.Location = new System.Drawing.Point(279, 114);
+            this.btnLancerRepartition.Location = new System.Drawing.Point(279, 109);
             this.btnLancerRepartition.Margin = new System.Windows.Forms.Padding(2);
             this.btnLancerRepartition.Name = "btnLancerRepartition";
-            this.btnLancerRepartition.Size = new System.Drawing.Size(213, 91);
+            this.btnLancerRepartition.Size = new System.Drawing.Size(233, 91);
             this.btnLancerRepartition.TabIndex = 3;
             this.btnLancerRepartition.Text = "Lancer la Répartition";
             this.btnLancerRepartition.UseVisualStyleBackColor = true;

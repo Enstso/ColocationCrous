@@ -53,7 +53,7 @@ namespace Colocation_CROUS
                 this.load(depenses);
                 MessageBox.Show("Enregistrement Valide");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -67,7 +67,7 @@ namespace Colocation_CROUS
                 ((Depense)lbGererDepenses.Items[position]).Remove();
                 lbGererDepenses.Items[position] = lbGererDepenses.Items[position];
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -78,10 +78,10 @@ namespace Colocation_CROUS
             try
             {
                 int position = lbGererDepenses.SelectedIndex;
-                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.modified, lbGererDepenses.Items,position);
+                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.modified, lbGererDepenses.Items, position);
                 fNouvelleDepense.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -91,10 +91,10 @@ namespace Colocation_CROUS
         {
             try
             {
-                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.added,lbGererDepenses.Items,0);
+                FnouvelleDepense fNouvelleDepense = new FnouvelleDepense(State.added, lbGererDepenses.Items, 0);
                 fNouvelleDepense.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -110,11 +110,11 @@ namespace Colocation_CROUS
                     lbGererDepenses.Items.Add(depense);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
 
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using System.Text.RegularExpressions;
 namespace Colocation_CROUS
 {
     public partial class FnouveauColocataire : Form
@@ -15,6 +16,7 @@ namespace Colocation_CROUS
         State state;
         ListBox.ObjectCollection items;
         int position;
+        int compteur;
         public FnouveauColocataire(State state, ListBox.ObjectCollection items, int position)
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace Colocation_CROUS
             this.state = state;
             this.items = items;
             this.position = position;
+
 
             switch (state)
             {
@@ -40,7 +43,7 @@ namespace Colocation_CROUS
 
                 case State.deleted:
                     this.Text = "Suppression d'un locataire";
-                        break;
+                    break;
 
                 case State.unChanged:
                     this.Text = "Consultation d'un colocataire";
@@ -54,20 +57,41 @@ namespace Colocation_CROUS
 
         private void BtnValider_Click(object sender, EventArgs e)
         {
+
             switch (this.state)
             {
+
                 case State.added:
-                    items.Add(new Colocataire(0, tbNom.Text, tbPrenom.Text, tbMail.Text, tbTelephone.Text, this.state));
+                    List<bool> list = new List<bool>();
+                    list.Add(Regexm(@"([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}", this.pbValidation1, tbNom));
+                    list.Add(Regexm(@"([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}", this.pbValidation2, tbPrenom));
+                    list.Add(Regexm(@"[a-z0-9]+@[a-z]+\.[a-z]{2,3}", this.pbValidation3, tbMail));
+                    list.Add(Regexm(@"^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$", this.pbValidation4, tbTelephone));
+                    int test = Testvalidation(list);
+                    if (test == 4)
+                    {
+                        items.Add(new Colocataire(0, tbNom.Text, tbPrenom.Text, tbMail.Text, tbTelephone.Text, this.state));
+                        this.Close();
+                    }
                     break;
                 case State.modified:
-                    Colocataire colocataire = (Colocataire)items[this.position];
-                    colocataire.Nom = this.tbNom.Text;
-                    colocataire.Prenom = this.tbPrenom.Text;
-                    colocataire.Mail= this.tbMail.Text;
-                    colocataire.Telephone = this.tbTelephone.Text;
-                    colocataire.State = this.state;
-                    items[this.position] = colocataire;
-                    
+                    List<bool> list2 = new List<bool>();
+                    list2.Add(Regexm(@"([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}", this.pbValidation1, tbNom));
+                    list2.Add(Regexm(@"([a-zA-Z',.-]+( [a-zA-Z',.-]+)*){2,30}", this.pbValidation2, tbPrenom));
+                    list2.Add(Regexm(@"[a-z0-9]+@[a-z]+\.[a-z]{2,3}", this.pbValidation3, tbMail));
+                    list2.Add(Regexm(@"^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$", this.pbValidation4, tbTelephone));
+                    int test2 = Testvalidation(list2);
+                    if (test2 == 4)
+                    {
+                        Colocataire colocataire = (Colocataire)items[this.position];
+                        colocataire.Nom = this.tbNom.Text;
+                        colocataire.Prenom = this.tbPrenom.Text;
+                        colocataire.Mail = this.tbMail.Text;
+                        colocataire.Telephone = this.tbTelephone.Text;
+                        colocataire.State = this.state;
+                        items[this.position] = colocataire;
+                        this.Close();
+                    }
                     break;
                 case State.deleted:
                     break;
@@ -76,7 +100,43 @@ namespace Colocation_CROUS
                 default:
                     break;
             }
-            this.Close();
+
         }
+
+        public bool Regexm(string re, PictureBox pb, TextBox tb)
+        {
+            bool valid = false;
+            Regex regex = new Regex(re);
+            if (regex.IsMatch(tb.Text))
+            {
+                pb.Image = Properties.Resources.valid;
+                valid = true;
+                this.compteur = this.compteur + 1;
+            }
+            else
+            {
+                pb.Image = Properties.Resources.invalid;
+                if (this.compteur < 0)
+                {
+                    this.compteur = 0;
+                }
+            }
+            return valid;
+        }
+
+        public int Testvalidation(List<bool> list)
+        {
+            int compteur = 0;
+            foreach (bool elmt in list)
+            {
+                if (elmt == true)
+                {
+                    compteur = compteur + 1;
+                }
+
+            }
+            return compteur;
+        }
+
     }
 }

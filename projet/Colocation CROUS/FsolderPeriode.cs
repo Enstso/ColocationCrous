@@ -29,9 +29,16 @@ namespace Colocation_CROUS
 
         private void BtnLancerRepartition_Click(object sender, EventArgs e)
         {
+            try
+            {
                 RepartirDepense FrepartirDepense = new RepartirDepense();
                 FrepartirDepense.Show();
                 this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
        

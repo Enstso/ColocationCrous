@@ -108,7 +108,7 @@ namespace Colocation_CROUS
             this.lbGererDepenses.Margin = new System.Windows.Forms.Padding(2);
             this.lbGererDepenses.Name = "lbGererDepenses";
             this.lbGererDepenses.ScrollAlwaysVisible = true;
-            this.lbGererDepenses.Size = new System.Drawing.Size(612, 368);
+            this.lbGererDepenses.Size = new System.Drawing.Size(612, 382);
             this.lbGererDepenses.TabIndex = 6;
             // 
             // btnSave

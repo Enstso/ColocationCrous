@@ -36,7 +36,6 @@ namespace Colocation_CROUS
             this.lblMontant = new System.Windows.Forms.Label();
             this.tbMontant = new System.Windows.Forms.TextBox();
             this.tbTexte = new System.Windows.Forms.TextBox();
-            this.pbJustificatif = new System.Windows.Forms.PictureBox();
             this.cbidColoc = new System.Windows.Forms.ComboBox();
             this.btnChoisir = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +44,12 @@ namespace Colocation_CROUS
             this.lblrequired3 = new System.Windows.Forms.Label();
             this.lblrequired4 = new System.Windows.Forms.Label();
             this.lblrequired2 = new System.Windows.Forms.Label();
+            this.pbJustificatif = new System.Windows.Forms.PictureBox();
+            this.pbValidation1 = new System.Windows.Forms.PictureBox();
+            this.pbValidation2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbJustificatif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValidation1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValidation2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnValider
@@ -82,7 +86,7 @@ namespace Colocation_CROUS
             // 
             this.lblJustificatif.AutoSize = true;
             this.lblJustificatif.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJustificatif.Location = new System.Drawing.Point(378, 19);
+            this.lblJustificatif.Location = new System.Drawing.Point(370, 19);
             this.lblJustificatif.Name = "lblJustificatif";
             this.lblJustificatif.Size = new System.Drawing.Size(94, 23);
             this.lblJustificatif.TabIndex = 3;
@@ -112,15 +116,6 @@ namespace Colocation_CROUS
             this.tbTexte.Size = new System.Drawing.Size(215, 20);
             this.tbTexte.TabIndex = 9;
             // 
-            // pbJustificatif
-            // 
-            this.pbJustificatif.Location = new System.Drawing.Point(297, 55);
-            this.pbJustificatif.Name = "pbJustificatif";
-            this.pbJustificatif.Size = new System.Drawing.Size(246, 158);
-            this.pbJustificatif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJustificatif.TabIndex = 11;
-            this.pbJustificatif.TabStop = false;
-            // 
             // cbidColoc
             // 
             this.cbidColoc.FormattingEnabled = true;
@@ -128,12 +123,11 @@ namespace Colocation_CROUS
             this.cbidColoc.Name = "cbidColoc";
             this.cbidColoc.Size = new System.Drawing.Size(220, 21);
             this.cbidColoc.TabIndex = 12;
-            this.cbidColoc.SelectedIndexChanged += new System.EventHandler(this.cbidColoc_SelectedIndexChanged);
             // 
             // btnChoisir
             // 
             this.btnChoisir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoisir.Location = new System.Drawing.Point(374, 248);
+            this.btnChoisir.Location = new System.Drawing.Point(366, 244);
             this.btnChoisir.Name = "btnChoisir";
             this.btnChoisir.Size = new System.Drawing.Size(98, 29);
             this.btnChoisir.TabIndex = 14;
@@ -201,12 +195,41 @@ namespace Colocation_CROUS
             this.lblrequired2.TabIndex = 20;
             this.lblrequired2.Text = "*";
             // 
+            // pbJustificatif
+            // 
+            this.pbJustificatif.Location = new System.Drawing.Point(297, 55);
+            this.pbJustificatif.Name = "pbJustificatif";
+            this.pbJustificatif.Size = new System.Drawing.Size(246, 158);
+            this.pbJustificatif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbJustificatif.TabIndex = 11;
+            this.pbJustificatif.TabStop = false;
+            // 
+            // pbValidation1
+            // 
+            this.pbValidation1.Location = new System.Drawing.Point(258, 129);
+            this.pbValidation1.Name = "pbValidation1";
+            this.pbValidation1.Size = new System.Drawing.Size(21, 20);
+            this.pbValidation1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbValidation1.TabIndex = 22;
+            this.pbValidation1.TabStop = false;
+            // 
+            // pbValidation2
+            // 
+            this.pbValidation2.Location = new System.Drawing.Point(258, 173);
+            this.pbValidation2.Name = "pbValidation2";
+            this.pbValidation2.Size = new System.Drawing.Size(21, 20);
+            this.pbValidation2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbValidation2.TabIndex = 23;
+            this.pbValidation2.TabStop = false;
+            // 
             // FnouvelleDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(576, 372);
+            this.Controls.Add(this.pbValidation2);
+            this.Controls.Add(this.pbValidation1);
             this.Controls.Add(this.lblrequired2);
             this.Controls.Add(this.lblrequired4);
             this.Controls.Add(this.lblrequired3);
@@ -225,8 +248,9 @@ namespace Colocation_CROUS
             this.Controls.Add(this.btnValider);
             this.Name = "FnouvelleDepense";
             this.Text = "FNouvelleDepense";
-            this.Load += new System.EventHandler(this.FNouvelleDepense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbJustificatif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValidation1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValidation2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +274,7 @@ namespace Colocation_CROUS
         private System.Windows.Forms.Label lblrequired3;
         private System.Windows.Forms.Label lblrequired4;
         private System.Windows.Forms.Label lblrequired2;
+        private System.Windows.Forms.PictureBox pbValidation1;
+        private System.Windows.Forms.PictureBox pbValidation2;
     }
 }

@@ -95,7 +95,7 @@ namespace Dao
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
-                using (MySqlCommand cmd = new MySqlCommand("Update Depense set texte=@texte ladate=@ladate,justificatif=@justificatif,montant=@montant,reparti=@reparti,idColoc=@idcoloc  where id=@id", cnx))
+                using (MySqlCommand cmd = new MySqlCommand("Update Depense set texte=@texte,ladate=@ladate,justificatif=@justificatif,montant=@montant,reparti=@reparti,idColoc=@idcoloc  where id=@id", cnx))
                 {
                     cmd.Parameters.Add(new MySqlParameter("@id", depense.Id));
                     cmd.Parameters.Add(new MySqlParameter("@texte", depense.Texte));

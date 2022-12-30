@@ -150,5 +150,9 @@
   <ItemGroup>
     <None Include="Resources\csm_logo-crous-versailles_6c2cc18e63.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\invalid.png" />
+    <Content Include="Resources\valid.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
