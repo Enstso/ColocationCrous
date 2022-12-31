@@ -101,7 +101,7 @@ namespace Dao
                     {
                         while (rdr.Read())
                         {
-                            colocataires.Add(new Colocataire(Convert.ToInt32(rdr["id"]), rdr["nom"].ToString(), rdr["prenom"].ToString(), rdr["mail"].ToString(), rdr["telephone"].ToString(), State.unChanged)); 
+                            colocataires.Add(new Colocataire(Convert.ToInt32(rdr["id"]), rdr["nom"].ToString(), rdr["prenom"].ToString(), rdr["mail"].ToString(), rdr["telephone"].ToString(), State.unChanged));
                         }
                     }
                 }
@@ -122,7 +122,7 @@ namespace Dao
                     {
                         while (rdr.Read())
                         {
-                            return new  Colocataire(Convert.ToInt32(rdr["id"]), rdr["nom"].ToString(), rdr["prenom"].ToString(), rdr["mail"].ToString(), rdr["telephone"].ToString(), State.unChanged);
+                            return new Colocataire(Convert.ToInt32(rdr["id"]), rdr["nom"].ToString(), rdr["prenom"].ToString(), rdr["mail"].ToString(), rdr["telephone"].ToString(), State.unChanged);
                         }
                     }
                 }

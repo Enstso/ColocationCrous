@@ -35,12 +35,10 @@ namespace Colocation_CROUS
                 FrepartirDepense.Show();
                 this.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-       
     }
 }

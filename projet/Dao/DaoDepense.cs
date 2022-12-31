@@ -125,7 +125,7 @@ namespace Dao
                     cmd.Parameters.Add(new MySqlParameter("@montant", depense.Montant));
                     cmd.Parameters.Add(new MySqlParameter("@idColoc", depense.IdColoc));
                     cmd.ExecuteNonQuery();
-                                      
+
                 }
             }
             depense.State = State.unChanged;
@@ -134,7 +134,7 @@ namespace Dao
         public bool toutEstReparti()
         {
             List<bool> repartitions = new List<bool>();
-            bool reparti=true;
+            bool reparti = true;
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
@@ -148,9 +148,9 @@ namespace Dao
                     rdr.Close();
                 }
                 cnx.Close();
-                
+
             }
-            for(int i= 0; i < repartitions.Count; i++)
+            for (int i = 0; i < repartitions.Count; i++)
             {
                 if (repartitions[i] == false)
                 {
@@ -191,7 +191,7 @@ namespace Dao
                 cnx.Open();
                 using (MySqlCommand cmd = new MySqlCommand("select sum(montant) from depense where idColoc=@id and reparti = false;", cnx))
                 {
-                    cmd.Parameters.Add(new MySqlParameter("@id",id));
+                    cmd.Parameters.Add(new MySqlParameter("@id", id));
                     resultat = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
                 cnx.Close();

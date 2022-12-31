@@ -37,7 +37,7 @@ namespace Colocation_CROUS
                 daoColocataire.ReinitialiserColocataires();
                 MessageBox.Show("L'application a été réinitilisée");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -51,7 +51,7 @@ namespace Colocation_CROUS
                 FsolderPeriode fsolderPeriode = new FsolderPeriode();
                 fsolderPeriode.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -65,7 +65,7 @@ namespace Colocation_CROUS
                 FgererDepenses fgererDepenses = new FgererDepenses();
                 fgererDepenses.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -78,7 +78,7 @@ namespace Colocation_CROUS
                 FgererColocataire gererColocataire = new FgererColocataire();
                 gererColocataire.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

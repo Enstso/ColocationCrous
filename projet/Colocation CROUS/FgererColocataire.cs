@@ -86,7 +86,6 @@ namespace Colocation_CROUS
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void Btnajouter_Click(object sender, EventArgs e)
@@ -96,7 +95,7 @@ namespace Colocation_CROUS
                 FnouveauColocataire fedit = new FnouveauColocataire(State.added, lbColocataire.Items, 0);
                 fedit.Show();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -112,14 +111,10 @@ namespace Colocation_CROUS
                     lbColocataire.Items.Add(coloc);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
-
-        
     }
 }

@@ -24,7 +24,7 @@ namespace Colocation_CROUS
             this.state = state;
             this.items = items;
             this.id = id;
-            
+
             this.cbidColoc.SelectedIndexChanged += CbidColoc_SelectedIndexChanged;
             this.btnValider.Click += BtnValider_Click;
             this.btnChoisir.Click += BtnChoisir_Click;
@@ -44,7 +44,7 @@ namespace Colocation_CROUS
                     this.Text = "Modification d'une dépense";
                     this.dtpDate.Value = ((Depense)items[id]).Date;
                     this.tbTexte.Text = ((Depense)items[id]).Texte;
-                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString("0.##"); 
+                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString("0.##");
                     this.cbidColoc.Enabled = false;
                     this.pbJustificatif.ImageLocation = ((Depense)items[id]).Justificatif;
                     break;
@@ -64,7 +64,7 @@ namespace Colocation_CROUS
         private void BtnChoisir_Click(object sender, EventArgs e)
         {
             OpenFileDialog file = new OpenFileDialog();
-            file.Title = "Choissez un justificatif";
+            file.Title = "Choisissez un justificatif";
             file.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png*.pdf)|*.BMP;*.JPG;*.JPEG;*.PNG;*.PDF";
             if (file.ShowDialog() == DialogResult.OK)
             {
@@ -90,11 +90,11 @@ namespace Colocation_CROUS
                     int test = Testvalidation(list);
                     if (this.cbidColoc.SelectedItem != null)
                     {
-                        
+
                     }
                     else
                     {
-                        MessageBox.Show("Choissisez un colocataire");
+                        MessageBox.Show("Choisissez un colocataire");
                     }
                     if (test == 3)
                     {
@@ -155,7 +155,7 @@ namespace Colocation_CROUS
                 }
 
             }
-            if(this.pbJustificatif.ImageLocation != null)
+            if (this.pbJustificatif.ImageLocation != null)
             {
                 compteur = compteur + 1;
             }
@@ -166,9 +166,6 @@ namespace Colocation_CROUS
 
             return compteur;
         }
-
-        
     }
-
 }
 

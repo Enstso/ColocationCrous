@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Colocation_CROUS
                     lbDepense.Items.Add(depense);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -66,7 +67,7 @@ namespace Colocation_CROUS
                     {
                         resultat = 0;
                     }
-                    lbDoitCombien.Items.Add(coloc.Afficher(coloc.Nom, resultat));
+                    lbDoitCombien.Items.Add(coloc.Afficher(coloc.Nom, coloc.Prenom, resultat));
                 }
 
                 foreach (Depense depense in depensesNonReparti)
@@ -74,11 +75,32 @@ namespace Colocation_CROUS
 
                     daoDepense.UpdateReparti(depense.Id);
                 }
+                saveFile(lbDoitCombien.Items);
                 this.btnRepartir.Enabled = false;
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public void saveFile(ListBox.ObjectCollection items)
+        {
+
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; ;
+            string doitTxt = "";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string elmt in items)
+                {
+                    doitTxt = doitTxt + elmt + "\n";
+                }
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine("Répartiton:" + "\n" + doitTxt);
+                }
             }
         }
     }

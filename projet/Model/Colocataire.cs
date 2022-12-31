@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-   public class Colocataire
+    public class Colocataire
     {
         private int id;
         private string nom;
@@ -14,7 +14,7 @@ namespace Model
         private string mail;
         private string telephone;
         private State state;
-        public Colocataire(int id, string nom, string prenom, string mail, string telephone,State state)
+        public Colocataire(int id, string nom, string prenom, string mail, string telephone, State state)
         {
             this.id = id;
             this.nom = nom;
@@ -103,7 +103,7 @@ namespace Model
 
         public double aPaye()
         {
-            double d= 0.0;
+            double d = 0.0;
             return d;
         }
 
@@ -117,9 +117,9 @@ namespace Model
             this.state = State.deleted;
         }
 
-        public string Afficher(string nom, decimal montant)
+        public string Afficher(string nom, string prenom, decimal montant)
         {
-            return string.Format("{0} : {1}", nom, montant);
+            return string.Format("{0} {1} Doit aux autres colocataires un montant de {2}€", nom, prenom, montant);
         }
     }
 }
