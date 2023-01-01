@@ -214,3 +214,26 @@ C:\Users\Zunaid\Documents\crous-projet\projet\Colocation CROUS\obj\Debug\Colocat
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FMain.resources
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererColocataire.resources
 D:\C#\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererDepenses.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.AssemblyReference.cache
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Fmain.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FnouveauColocataire.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FnouvelleDepense.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FsolderPeriode.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererColocataire.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.FgererDepenses.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.Properties.Resources.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation_CROUS.RepartirDepense.resources
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe.config
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.exe
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Colocation CROUS.pdb
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.dll
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Model.dll
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.dll
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Dao.pdb
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\Model.pdb
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\bin\Debug\MySql.Data.xml
+C:\Users\Zunaid\Pictures\crous-projet\projet\Colocation CROUS\obj\Debug\View.csproj.CopyComplete
