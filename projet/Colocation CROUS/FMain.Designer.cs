@@ -35,13 +35,13 @@ namespace Colocation_CROUS
             this.plnFmain = new System.Windows.Forms.Panel();
             this.lblFmain = new System.Windows.Forms.Label();
             this.pnlBackgrond = new System.Windows.Forms.Panel();
+            this.pbCrous = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnReinitialiser = new System.Windows.Forms.Button();
-            this.pbCrous = new System.Windows.Forms.PictureBox();
             this.plnFmain.SuspendLayout();
             this.pnlBackgrond.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrous)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGererColoc
@@ -67,7 +67,7 @@ namespace Colocation_CROUS
             this.btnSolderPeriode.Name = "btnSolderPeriode";
             this.btnSolderPeriode.Size = new System.Drawing.Size(337, 108);
             this.btnSolderPeriode.TabIndex = 1;
-            this.btnSolderPeriode.Text = "Solder Une Periode";
+            this.btnSolderPeriode.Text = "Solder Une Période";
             this.btnSolderPeriode.UseVisualStyleBackColor = false;
             // 
             // btnGererDepense
@@ -118,6 +118,18 @@ namespace Colocation_CROUS
             this.pnlBackgrond.Size = new System.Drawing.Size(910, 486);
             this.pnlBackgrond.TabIndex = 4;
             // 
+            // pbCrous
+            // 
+            this.pbCrous.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbCrous.Cursor = System.Windows.Forms.Cursors.No;
+            this.pbCrous.Image = global::Colocation_CROUS.Properties.Resources.csm_logo_crous_versailles_6c2cc18e63;
+            this.pbCrous.Location = new System.Drawing.Point(82, 70);
+            this.pbCrous.Name = "pbCrous";
+            this.pbCrous.Size = new System.Drawing.Size(329, 322);
+            this.pbCrous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCrous.TabIndex = 4;
+            this.pbCrous.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -149,18 +161,6 @@ namespace Colocation_CROUS
             this.btnReinitialiser.Text = "Réinitialiser";
             this.btnReinitialiser.UseVisualStyleBackColor = true;
             // 
-            // pbCrous
-            // 
-            this.pbCrous.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbCrous.Cursor = System.Windows.Forms.Cursors.No;
-            this.pbCrous.Image = global::Colocation_CROUS.Properties.Resources.csm_logo_crous_versailles_6c2cc18e63;
-            this.pbCrous.Location = new System.Drawing.Point(82, 70);
-            this.pbCrous.Name = "pbCrous";
-            this.pbCrous.Size = new System.Drawing.Size(329, 322);
-            this.pbCrous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCrous.TabIndex = 4;
-            this.pbCrous.TabStop = false;
-            // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,8 +178,8 @@ namespace Colocation_CROUS
             this.plnFmain.ResumeLayout(false);
             this.plnFmain.PerformLayout();
             this.pnlBackgrond.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbCrous)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

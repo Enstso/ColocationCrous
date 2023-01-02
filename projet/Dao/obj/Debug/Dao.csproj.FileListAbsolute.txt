@@ -106,13 +106,3 @@ C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj.AssemblyR
 C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
 C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.dll
 C:\Users\Zunaid\Documents\crous-projet\projet\Dao\obj\Debug\Dao.pdb
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\obj\Debug\Dao.csproj.AssemblyReference.cache
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\obj\Debug\Dao.dll
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\obj\Debug\Dao.pdb
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\bin\Debug\Dao.dll
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\bin\Debug\Dao.pdb
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\bin\Debug\Model.dll
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\bin\Debug\MySql.Data.dll
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\bin\Debug\Model.pdb
-C:\Users\Zunaid\Pictures\crous-projet\projet\Dao\obj\Debug\Dao.csproj.CopyComplete
