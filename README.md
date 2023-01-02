@@ -260,7 +260,7 @@ On ne pourra répartir des dépenses tant que de nouvelles dépenses pour la col
 Enfin, nous pouvons réinitialiser l'application entière, supprimant ainsi tous les colocataires ainsi que toutes les dépenses.
 ![FMENU](image/FMENU2.PNG)
 
-Mail Dévellopeurs :
+Mails Dévellopeurs :
 
 Zunaid : mzunaid2003@gmail.com
 
