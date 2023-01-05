@@ -22,7 +22,29 @@ namespace Colocation_CROUS
             this.btnSupprimerDepense.Click += BtnSupprimerDepense_Click;
             this.btnSave.Click += BtnSave_Click;
             this.btnReinitialiser.Click += BtnReinitialiser_Click;
+            this.cbTri.SelectedIndexChanged += CbTri_SelectedIndexChanged;
+            this.lblMontant.Text = new Dao.DaoDepense().GetMontantTotal().ToString("0.00")+" €";
+            Prix();
+            ComboBox.ObjectCollection items = this.cbTri.Items;
+            items.Add("id");
+            items.Add("ladate");
+            items.Add("texte");
+            items.Add("justificatif");
+            items.Add("montant");
+            items.Add("reparti");
+            items.Add("idColoc");
             this.load(new DaoDepense().GetAll());
+        }
+
+        private void Prix()
+        {
+            this.lblMontant.Text = new Dao.DaoDepense().GetMontantTotal().ToString("0.00") + " €";
+        }
+
+        private void CbTri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.lbGererDepenses.Items.Clear();
+            this.load(new DaoDepense().GetAll(this.cbTri.SelectedItem.ToString()));
         }
 
         private void BtnReinitialiser_Click(object sender, EventArgs e)
@@ -32,7 +54,7 @@ namespace Colocation_CROUS
                 DaoDepense daoDepense = new DaoDepense();
                 daoDepense.ReinitialiserDepenses();
                 lbGererDepenses.Items.Clear();
-                MessageBox.Show("Les dépenses de l'application ont été supprimées");
+                MessageBox.Show("Les dépenses de l'application ont été supprimées", "Confirmation");
             }
             catch (Exception ex)
             {
@@ -52,6 +74,8 @@ namespace Colocation_CROUS
                 new DaoDepense().SaveChanges(depenses);
                 this.load(depenses);
                 MessageBox.Show("Enregistrement Valide");
+                load(new DaoDepense().GetAll());
+                Prix();
             }
             catch (Exception ex)
             {
@@ -66,12 +90,14 @@ namespace Colocation_CROUS
                 int position = lbGererDepenses.SelectedIndex;
                 ((Depense)lbGererDepenses.Items[position]).Remove();
                 lbGererDepenses.Items[position] = lbGererDepenses.Items[position];
+                MessageBox.Show("Une dépense a été supprimée","Confirmation");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void BtnModifierDepense_Click(object sender, EventArgs e)
         {

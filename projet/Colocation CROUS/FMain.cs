@@ -35,7 +35,7 @@ namespace Colocation_CROUS
                 daoDepense.ReinitialiserDepenses();
                 DaoColocataire daoColocataire = new DaoColocataire();
                 daoColocataire.ReinitialiserColocataires();
-                MessageBox.Show("L'application a été réinitilisée");
+                MessageBox.Show("L'application a été réinitilisée", "Confirmation");
             }
             catch (Exception ex)
             {

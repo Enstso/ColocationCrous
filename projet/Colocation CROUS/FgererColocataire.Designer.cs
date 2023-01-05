@@ -46,14 +46,15 @@ namespace Colocation_CROUS
             // 
             // lbColocataire
             // 
-            this.lbColocataire.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbColocataire.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbColocataire.FormattingEnabled = true;
             this.lbColocataire.HorizontalScrollbar = true;
+            this.lbColocataire.ItemHeight = 14;
             this.lbColocataire.Location = new System.Drawing.Point(-2, -3);
             this.lbColocataire.Margin = new System.Windows.Forms.Padding(2);
             this.lbColocataire.Name = "lbColocataire";
             this.lbColocataire.ScrollAlwaysVisible = true;
-            this.lbColocataire.Size = new System.Drawing.Size(600, 394);
+            this.lbColocataire.Size = new System.Drawing.Size(600, 382);
             this.lbColocataire.TabIndex = 0;
             // 
             // btnajouter
@@ -181,6 +182,7 @@ namespace Colocation_CROUS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(894, 447);
             this.Controls.Add(this.pnlBackground);

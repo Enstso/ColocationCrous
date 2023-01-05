@@ -44,7 +44,7 @@ namespace Colocation_CROUS
                     this.Text = "Modification d'une dépense";
                     this.dtpDate.Value = ((Depense)items[id]).Date;
                     this.tbTexte.Text = ((Depense)items[id]).Texte;
-                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString("0.##");
+                    this.tbMontant.Text = ((Depense)items[id]).Montant.ToString("0.00");
                     this.cbidColoc.Enabled = false;
                     this.pbJustificatif.ImageLocation = ((Depense)items[id]).Justificatif;
                     break;
@@ -86,7 +86,7 @@ namespace Colocation_CROUS
                 case State.added:
                     List<bool> list = new List<bool>();
                     list.Add(Regexm(@"^[a-zA-Z]+$", this.pbValidation1, tbTexte));
-                    list.Add(Regexm(@"^[0-9]+$", this.pbValidation2, tbMontant));
+                    list.Add(Regexm(@"^\d+,\d{1,2}$", this.pbValidation2, tbMontant));
                     int test = Testvalidation(list);
                     if (this.cbidColoc.SelectedItem != null)
                     {
@@ -94,7 +94,7 @@ namespace Colocation_CROUS
                     }
                     else
                     {
-                        MessageBox.Show("Choisissez un colocataire");
+                        MessageBox.Show("Choisissez un colocataire","Alerte");
                     }
                     if (test == 3)
                     {
@@ -127,7 +127,7 @@ namespace Colocation_CROUS
                     break;
             }
         }
-
+        
         public bool Regexm(string re, PictureBox pb, TextBox tb)
         {
             bool valid = false;
@@ -161,11 +161,12 @@ namespace Colocation_CROUS
             }
             else
             {
-                MessageBox.Show("Justificatif Obligatoire");
+                MessageBox.Show("Justificatif Obligatoire","Alerte");
             }
 
             return compteur;
         }
+        
     }
 }
 

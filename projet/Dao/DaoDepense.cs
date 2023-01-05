@@ -53,6 +53,30 @@ namespace Dao
             return depenses;
         }
 
+        public List<Depense> GetAll(string tri)
+        {
+            string req = "select * from depense Order By " + tri;
+            List<Depense> depenses = new List<Depense>();
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand(req, cnx))
+                {
+                    ;
+                    using (MySqlDataReader rdr = cmd.ExecuteReader())
+                    {
+
+                        while (rdr.Read())
+                        {
+                            depenses.Add(new Depense(Convert.ToInt32(rdr["id"]), Convert.ToDateTime(rdr["ladate"]), rdr["texte"].ToString(), rdr["justificatif"].ToString(), Convert.ToDecimal(rdr["montant"]), Convert.ToBoolean(rdr["reparti"]), Convert.ToInt32(rdr["idColoc"]), State.unChanged));
+                        }
+                    }
+                }
+                cnx.Close();
+            }
+            return depenses;
+        }
+
         public List<Depense> GetAllByIdColoc(int idColoc)
         {
             List<Depense> depenses = new List<Depense>();
@@ -192,6 +216,22 @@ namespace Dao
                 using (MySqlCommand cmd = new MySqlCommand("select sum(montant) from depense where idColoc=@id and reparti = false;", cnx))
                 {
                     cmd.Parameters.Add(new MySqlParameter("@id", id));
+                    resultat = Convert.ToDecimal(cmd.ExecuteScalar());
+                }
+                cnx.Close();
+            }
+            return resultat;
+        }
+
+        public decimal GetMontantTotal()
+        {
+            decimal resultat;
+            using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
+            {
+                cnx.Open();
+                using (MySqlCommand cmd = new MySqlCommand("select sum(montant) from depense", cnx))
+                {
+                    
                     resultat = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
                 cnx.Close();

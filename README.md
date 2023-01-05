@@ -260,6 +260,25 @@ On ne pourra répartir des dépenses tant que de nouvelles dépenses pour la col
 Enfin, nous pouvons réinitialiser l'application entière, supprimant ainsi tous les colocataires ainsi que toutes les dépenses.
 ![FMENU](image/FMENU2.PNG)
 
+## E5 entrainement :
+
+Pour préparer l'épreuve de fin d'année l'e5 le professeur ma demander d'ajouter à mon application, des fonctionnalités supplémentaire qui permettent à un colocataire de trier les dépenses, dans l'ordre en fonction atttribut de son choix et d'afficher le montant total des dépenses.
+
+
+```plantuml
+@startuml SolderPeriode
+left to right direction
+:colocataire:
+package Gererdépense+{
+colocataire--(trier les dépenses) 
+colocataire--(Afficher le montant total des dépenses)
+
+}
+@endumlD
+```
+Exemple tri par montant :
+![tri.PNG](image/tri.PNG)
+
 Mails Dévellopeurs :
 
 Zunaid : mzunaid2003@gmail.com

@@ -51,7 +51,7 @@ namespace Colocation_CROUS
                 }
                 new DaoColocataire().SaveChanges(colocataires);
                 this.load(colocataires);
-                MessageBox.Show("Enregistrement Valide");
+                MessageBox.Show("Enregistrement Valide","Enregistrement");
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace Colocation_CROUS
                 int position = lbColocataire.SelectedIndex;
                 ((Colocataire)lbColocataire.Items[position]).Remove();
                 lbColocataire.Items[position] = lbColocataire.Items[position];
-                MessageBox.Show("Un colocataire a été supprimé");
+                MessageBox.Show("Un colocataire a été supprimé","Confirmation");
             }
             catch (Exception ex)
             {

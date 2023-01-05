@@ -36,6 +36,9 @@ namespace Colocation_CROUS
             this.lbGererDepenses = new System.Windows.Forms.ListBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnlBackground = new System.Windows.Forms.Panel();
+            this.lblMontant = new System.Windows.Forms.Label();
+            this.lbldescriptionMontant = new System.Windows.Forms.Label();
+            this.cbTri = new System.Windows.Forms.ComboBox();
             this.pnlGererDepense = new System.Windows.Forms.Panel();
             this.btnReinitialiser = new System.Windows.Forms.Button();
             this.tlpBtns = new System.Windows.Forms.TableLayoutPanel();
@@ -128,18 +131,49 @@ namespace Colocation_CROUS
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.White;
             this.pnlBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlBackground.Controls.Add(this.lblMontant);
+            this.pnlBackground.Controls.Add(this.lbldescriptionMontant);
             this.pnlBackground.Controls.Add(this.lbGererDepenses);
             this.pnlBackground.Location = new System.Drawing.Point(0, 38);
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlBackground.Size = new System.Drawing.Size(895, 408);
+            this.pnlBackground.Size = new System.Drawing.Size(895, 409);
             this.pnlBackground.TabIndex = 8;
+            // 
+            // lblMontant
+            // 
+            this.lblMontant.AutoSize = true;
+            this.lblMontant.Location = new System.Drawing.Point(102, 372);
+            this.lblMontant.Name = "lblMontant";
+            this.lblMontant.Size = new System.Drawing.Size(0, 13);
+            this.lblMontant.TabIndex = 9;
+            // 
+            // lbldescriptionMontant
+            // 
+            this.lbldescriptionMontant.AutoSize = true;
+            this.lbldescriptionMontant.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldescriptionMontant.Location = new System.Drawing.Point(1, 367);
+            this.lbldescriptionMontant.Name = "lbldescriptionMontant";
+            this.lbldescriptionMontant.Size = new System.Drawing.Size(101, 18);
+            this.lbldescriptionMontant.TabIndex = 8;
+            this.lbldescriptionMontant.Text = "Montant Total :";
+            // 
+            // cbTri
+            // 
+            this.cbTri.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.cbTri.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTri.FormattingEnabled = true;
+            this.cbTri.Location = new System.Drawing.Point(-2, 35);
+            this.cbTri.Name = "cbTri";
+            this.cbTri.Size = new System.Drawing.Size(121, 23);
+            this.cbTri.TabIndex = 7;
             // 
             // pnlGererDepense
             // 
             this.pnlGererDepense.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlGererDepense.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlGererDepense.Controls.Add(this.lblGererDepenses);
+            this.pnlGererDepense.Controls.Add(this.cbTri);
             this.pnlGererDepense.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGererDepense.Location = new System.Drawing.Point(0, 0);
             this.pnlGererDepense.Name = "pnlGererDepense";
@@ -184,6 +218,7 @@ namespace Colocation_CROUS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(894, 447);
             this.Controls.Add(this.tlpBtns);
             this.Controls.Add(this.pnlGererDepense);
@@ -192,6 +227,7 @@ namespace Colocation_CROUS
             this.Name = "FgererDepenses";
             this.Text = "GererDepenses";
             this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             this.pnlGererDepense.ResumeLayout(false);
             this.pnlGererDepense.PerformLayout();
             this.tlpBtns.ResumeLayout(false);
@@ -211,5 +247,8 @@ namespace Colocation_CROUS
         private System.Windows.Forms.Panel pnlGererDepense;
         private System.Windows.Forms.Button btnReinitialiser;
         private System.Windows.Forms.TableLayoutPanel tlpBtns;
+        private System.Windows.Forms.Label lblMontant;
+        private System.Windows.Forms.Label lbldescriptionMontant;
+        private System.Windows.Forms.ComboBox cbTri;
     }
 }
