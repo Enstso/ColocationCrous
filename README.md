@@ -1,4 +1,29 @@
 # Application Colocation CROUS
+
+Prérequis :
+
+Il est nécessaire d'installer le connector/net (https://dev.mysql.com/downloads/file/?id=515908), pour de l'ado.net.
+
+Il faudra ajouter la référence suivante  au projet :
+
+Dans vs :
+
+![img](image/f1.PNG)
+
+je fais un clique droit sur Dao et clique sur référence.
+
+Je clique sur parcourir : 
+
+![img](image/f2.PNG)
+
+Je choisis la référence suivante :
+
+![img](image/f3.PNG)
+
+Merci de respecter l'arborescence du fichier sinon risque d'érreur.
+
+Regénérer le projet.
+
 ## Contexte : 
 L'application du CROUS permet aux étudiants de gérer les dépenses d'une colocation :
 
@@ -221,6 +246,7 @@ On appuie donc sur le bouton Lancer la Répartition pour être rediriger vers un
 ![FRepartiDepense.PNG](image/FRepartirDepense.PNG)
 
 On peut voir sur le tableau de gauche les dépenses qui n'ont pas encore été réparties. En effet on pouvait voir dans le tableau de la fenêtre Gerer Depense que les dépenses étaint au nombre de deux :
+
 ![FNbDepense.PNG](image/FNbDepense.PNG)
 
 Dans le SGBD nous pouvons voir que la colonne reparti est à 0 donc false :
@@ -237,10 +263,12 @@ Le contenu du fichier :
 ![repartion.PNG](image/repartion.PNG)
 
  Nous obtiendrons sur le tableau de droite, la somme que doit régler chaque colocataire par rapport à ses dépenses faites pour la colocation.
+
 ![FRepartiFaite.PNG](image/FRepartiFaite.PNG) 
 
 
 ### Explication :  
+
 Jean a acheté un fauteuil d'une valeur de 50€.  
 Tandis que Antoine a acheté une chaise d'une valeur de 70€.  
 Le total des dépenses faites pour la colocation s'élève ici à 120€.  
@@ -277,10 +305,6 @@ colocataire--(Afficher le montant total des dépenses)
 @endumlD
 ```
 Exemple tri par montant :
+
 ![tri.PNG](image/tri.PNG)
 
-Mails Dévellopeurs :
-
-Zunaid : mzunaid2003@gmail.com
-
-Enstso : enstso@outlook.fr

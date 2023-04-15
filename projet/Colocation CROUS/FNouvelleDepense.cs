@@ -105,7 +105,7 @@ namespace Colocation_CROUS
                 case State.modified:
                     List<bool> list2 = new List<bool>();
                     list2.Add(Regexm(@"^[a-zA-Z]+$", this.pbValidation1, tbTexte));
-                    list2.Add(Regexm(@"^[0-9]+$", this.pbValidation2, tbMontant));
+                    list2.Add(Regexm(@"^\d+,\d{1,2}$", this.pbValidation2, tbMontant));
                     int test2 = Testvalidation(list2);
                     if (test2 == 3)
                     {

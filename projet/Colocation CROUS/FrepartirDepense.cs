@@ -89,7 +89,7 @@ namespace Colocation_CROUS
 
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; ;
+            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; 
             string doitTxt = "";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

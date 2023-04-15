@@ -225,15 +225,19 @@ namespace Dao
 
         public decimal GetMontantTotal()
         {
-            decimal resultat;
+            decimal resultat=0;
             using (MySqlConnection cnx = DaoConnectionSingleton.GetMySqlConnection())
             {
                 cnx.Open();
                 using (MySqlCommand cmd = new MySqlCommand("select sum(montant) from depense", cnx))
                 {
+                    if (Convert.ToDecimal(cmd.ExecuteScalar())!=0)
+                    {
+                        resultat = Convert.ToDecimal(cmd.ExecuteScalar());
+                    }
                     
-                    resultat = Convert.ToDecimal(cmd.ExecuteScalar());
                 }
+
                 cnx.Close();
             }
             return resultat;

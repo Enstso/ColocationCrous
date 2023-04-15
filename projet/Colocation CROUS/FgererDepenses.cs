@@ -23,7 +23,6 @@ namespace Colocation_CROUS
             this.btnSave.Click += BtnSave_Click;
             this.btnReinitialiser.Click += BtnReinitialiser_Click;
             this.cbTri.SelectedIndexChanged += CbTri_SelectedIndexChanged;
-            this.lblMontant.Text = new Dao.DaoDepense().GetMontantTotal().ToString("0.00")+" €";
             Prix();
             ComboBox.ObjectCollection items = this.cbTri.Items;
             items.Add("id");
@@ -38,7 +37,8 @@ namespace Colocation_CROUS
 
         private void Prix()
         {
-            this.lblMontant.Text = new Dao.DaoDepense().GetMontantTotal().ToString("0.00") + " €";
+            string montant = new DaoDepense().GetMontantTotal().ToString("0.00") + " €";
+            this.lblMontant.Text = montant;
         }
 
         private void CbTri_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Colocation_CROUS
                 int position = lbGererDepenses.SelectedIndex;
                 ((Depense)lbGererDepenses.Items[position]).Remove();
                 lbGererDepenses.Items[position] = lbGererDepenses.Items[position];
-                MessageBox.Show("Une dépense a été supprimée","Confirmation");
+                MessageBox.Show("Une dépense a été supprimée", "Confirmation");
             }
             catch (Exception ex)
             {
@@ -135,6 +135,9 @@ namespace Colocation_CROUS
                 {
                     lbGererDepenses.Items.Add(depense);
                 }
+
+
+
             }
             catch (Exception ex)
             {

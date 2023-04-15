@@ -22,8 +22,6 @@ namespace Colocation_CROUS
             this.btnGererDepense.Click += BtnGererDepense_Click;
             this.btnSolderPeriode.Click += BtnSolderPeriode_Click;
             this.btnReinitialiser.Click += BtnReinitialiser_Click;
-            SoundPlayer sound = new SoundPlayer(@"wi.WAV");
-            sound.Play();
             DaoConnectionSingleton.SetStringConnection("root", "", "localhost", "dbcrous");
         }
 
