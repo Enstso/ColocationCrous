@@ -1,31 +1,31 @@
 # Application Colocation CROUS
 
-Prérequis :
+Prerequisites :
 
-Il est nécessaire d'installer le connector/net (https://dev.mysql.com/downloads/file/?id=515908), pour de l'ado.net.
+To run this project, you need to install the connector/net (https://dev.mysql.com/downloads/file/?id=515908), for ADO.NET.
 
-Il faudra ajouter la référence suivante  au projet :
+You must also add the following reference to the project :
 
-Dans vs :
+In Visual Studio :
 
 ![img](image/f1.PNG)
 
-je fais un clique droit sur Dao et clique sur référence.
+Right-click on `Dao` and click on `Reference`.
 
-Je clique sur parcourir : 
+Click on `parcourir` : 
 
 ![img](image/f2.PNG)
 
-Je choisis la référence suivante :
+Select the following reference :
 
 ![img](image/f3.PNG)
 
-Merci de respecter l'arborescence du fichier sinon risque d'érreur.
+Make sure to follow the directory structure correctly to avoid errors.
 
-Regénérer le projet.
+Rebuild the project.
 
 ## Contexte : 
-L'application du CROUS permet aux étudiants de gérer les dépenses d'une colocation :
+The CROUS application helps students manage the expenses of a shared apartment :
 
 ```plantuml
 @startuml Colocataire
@@ -44,7 +44,8 @@ package Colocataire{
 
 <br></br>
 
-### Voici les tables de la base de donnée qu'utilisera l'application :
+### Database Tables Used by the Application :
+
 ```sql
 drop database if exists dbcrous;
 create database dbcrous;
@@ -75,7 +76,7 @@ CREATE TABLE Depense(
 ```
 ## **Menu :**
 ---
-Voici l'interface principale permettant d'accéder aux différentes fonctionnalités :
+Here is the main interface allowing access to the various features :
 
 ![FenetreMenu.jpg](image/FMENU.jpg)
 ```plantuml
@@ -96,7 +97,7 @@ package Menu{
 ---
 
 
-Voici l'interface permettant de consulter la liste des colocataires et permettant d'ajouter, modifier ou encore de supprimer un colocataire :
+Here is the interface allowing you to view the list of colocataires and to add, modify, or delete a colocataire :
 
 ![FGererColoc.PNG](image/FGererColoc.PNG)
 
@@ -119,26 +120,27 @@ package GérerColocataire{
 
 ### AJOUT COLOCATAIRE :
 
-On peut donc Ajouter des colocataires en appuyant sur le bouton Ajouter nous somme redirigées vers une nouvelle fenêtre : 
+Here is the interface allowing you to view the list of colocataires and to add, modify, or delete a colocataire : 
 
 ![FAjoutColoc.PNG](image/FAjoutColoc.PNG)
 
-Si une des informations entrées ne sont pas correctes, la page ne se fermera pas attendant ainsi les bonnes informations :
+If any of the entered information is incorrect, the page will not close until valid information is provided :
 
 ![FAjoutMauvaisColoc.PNG](image/FAjoutMauvaisColoc.PNG)
 
 
 
 ### MODIFICATION COLOCATAIRE :
-On peut également modifier les informations d'un colocataire en appuyant sur le bouton Modifier. Attention il faut sélectionner un colocataire avant d'appuyer sur Modifier.
+
+You can also modify a colocataire's information by clicking on the "Modify" button. Be sure to select a colocataire before clicking "Modifier".
 
 ![FTutoModifColoc.PNG](image/FTutoModifColoc.PNG)
 
-nous redirigeant ainsi vers une nouvelle fenêtre :
+This will redirect you to a new window :
 
 ![FModifColoc.PNG](image/FModifColoc.PNG)
 
-Si une des informations entrées ne sont pas correctes, les informations saisies ne pourront être validées:
+If any of the entered information is incorrect, the details cannot be validated :
 
 ![FModifMauvaiseColoc.PNG](image/FModifMauvaiseColoc.PNG)
 
@@ -146,20 +148,22 @@ Si une des informations entrées ne sont pas correctes, les informations saisies
 
 ### SUPPRESSION COLOCATAIRE :
 
-Il est aussi possible de supprimer un colocataire, pour cela il faut sélectionner le colocataire puis appuyer sur Supprimer.
+You can delete a colocataire by selecting the colocataire and clicking on "Supprimer".
 
 ![FSupprimerColoc.PNG](image/FSupprimerColoc.PNG)
 
 </br>
 
-**ATTENTION :**  
-Il faut à chaque action effectuée, appuyer sur Enregistrer pour pouvoir sauvegarder ce qui a pu être fait.
+**Note :**  
+
+For every action, make sure to click "Enregistrer"  to save your changes.
 
 ![FEnregistrerColoc.PNG](image/FEnregistrerColoc.PNG)
 
 
 ### RÉINITIALISER LES COLOCATAIRES :
-Enfin, on peut supprimer tous les colocataires en une fois grâce au bouton Réinitialiser :
+
+You can reset all colocataires at once by clicking the "Réinitialiser" button :
 
 ![FColocReinitialiser.PNG](image/FColocReinitialiser.PNG)
 
@@ -167,7 +171,8 @@ Enfin, on peut supprimer tous les colocataires en une fois grâce au bouton Réi
 
 ## **Gérer les dépenses :**
 ---
-Voici l'interface permettant de consulter la liste des dépenses et permettant d'ajouter, modifier ou encore de supprimer une dépense :
+
+Here is the interface to view and manage the expenses, allowing you to add, modify, or delete an expense :
 
 
 ![FGererDepense.PNG](image/FGererDepenses.PNG)
@@ -190,25 +195,29 @@ package GérerDépense{
 <br></br>
 
 ### AJOUT DEPENSE :
-Des controlleurs de saisie sont présent pour l'ensemble des champs.
+
+Input controllers are present for all fields.
+
 ![FAjoutDepenses.PNG](image/FAjoutDepense.PNG)
 
 <br></br>
 
 ### MODIFICATION DEPENSE :
-En cas d'erreur ou autres, les informations comme la date, le texte, le montant ou encore le fichier justificatif peuvent être modifiés.
+
+In case of errors or updates, details like date, text, amount, or the supporting file can be modified.
 
 ![FModifDepense.PNG](image/FModifDepense.PNG)
 
 <br></br>
 
 ### SUPPRESSION DEPENSE :
-Il suffit de sélectionner la dépense et de cliquer sur le bouton Supprimer même principe que pour les colocataires.
 
+Simply select the expense and click the "Supprimer" button, similar to how you delete colocataires.
 <br></br>
 
 ### REINITIALISER LES DEPENSES :
-Enfin, on peut supprimer toutes les dépenses en une fois grâce au bouton Réinitialiser :
+
+You can reset all expenses at once by clicking the "Réinitialiser" button :
 
 ![FDepenseReinitialiser.PNG](image/FDepenseReinitialiser.PNG)
 
@@ -216,14 +225,15 @@ Enfin, on peut supprimer toutes les dépenses en une fois grâce au bouton Réin
 
 
 ### ENREGISTRER DEPENSE :
-Cliquer sur le bouton Enregistrer après chaque action.
+
+Click the "Enregistrer" button after each action.
 ![FEnregistrerColoc.PNG](image/FEnregistrerColoc.PNG)
 
 <br></br>
 
 ## **Répartir les dépenses sur une période :**
 ---
-Cette fonctionnalité permet de calculer ce que chaque personne doit aux autres colocataires par rapport aux dépenses faites pour la colocation.
+This feature allows you to calculate what each colocataire owes the others based on the expenses incurred for the shared apartment.
 
 ![FSolderPeriode.PNG](image/FSolderPeriode.PNG)
 
@@ -241,57 +251,56 @@ colocataire--(Solder une période) :<<include>>
 @endumlD
 ```
 
-On appuie donc sur le bouton Lancer la Répartition pour être rediriger vers une nouvelle fenêtre :
+Click on the "Lancer la Répartition" utton to be redirected to a new window :
 
 ![FRepartiDepense.PNG](image/FRepartirDepense.PNG)
 
-On peut voir sur le tableau de gauche les dépenses qui n'ont pas encore été réparties. En effet on pouvait voir dans le tableau de la fenêtre Gerer Depense que les dépenses étaint au nombre de deux :
+On the left side, you'll see the expenses that haven't been distributed yet. For example, in the "Gerer Depenses" window, there were two expenses :
 
 ![FNbDepense.PNG](image/FNbDepense.PNG)
 
-Dans le SGBD nous pouvons voir que la colonne reparti est à 0 donc false :
+In the database, we can see that the "reparti" column is set to 0 (false) :
 
 ![BddRepartition.PNG](image/BddRepartition.PNG) 
 
 <br></br>
-En appuyant sur le bouton Répartir, l'explorateur de fichier s'ouvrira pour sauvegarder la répartition, l'étudiant a la possiblité d'enregistrer la répartiton dans un fichier.
+By clicking on "Répartir"  the file explorer will open to save the distribution, allowing the student to store the distribution in a file.
 
 ![save.PNG](image/save.PNG)
 
-Le contenu du fichier :
+The file content :
 
 ![repartion.PNG](image/repartion.PNG)
 
- Nous obtiendrons sur le tableau de droite, la somme que doit régler chaque colocataire par rapport à ses dépenses faites pour la colocation.
+ On the right side of the table, you'll see the amount that each colocataire owes based on their contributions to the shared apartment.
 
 ![FRepartiFaite.PNG](image/FRepartiFaite.PNG) 
 
 
 ### Explication :  
 
-Jean a acheté un fauteuil d'une valeur de 50€.  
-Tandis que Antoine a acheté une chaise d'une valeur de 70€.  
-Le total des dépenses faites pour la colocation s'élève ici à 120€.  
-Il faut donc que chaque colocataire se partage cette somme. Ici chacun doit payer 60€.  
-Antoine ayant payé plus de 60€ et Jean ayant payé moins, devra donner 10€ à Antoine pour qu'il sa obtienne sa compensation.
+Jean bought a chair worth €50, and Antoine bought a chair worth €70.
+The total expenses for the shared apartment are €120.
+Each colocataire should pay €60.
+Since Antoine paid more than €60 and Jean paid less, Jean will owe Antoine €10 to balance the payments.
 <br></br>
 
-La répartition étant faites, ces dépenses ne s'afficheront désormais plus dans ce tableau et dans le sgbd reparti sera désormais à  1(True) :
+Once the distribution is done, these expenses will no longer appear in the table, and in the database, the "reparti" value will be set to 1 (True) :
 
 ![BddRepartitionFaite.PNG](image/BddRepartitionFaite.PNG)
 
-On ne pourra répartir des dépenses tant que de nouvelles dépenses pour la colocation n'ont pas été faites :
+You won't be able to distribute expenses until new expenses are added for the shared apartment :
 
 ![FSolderPeriode2.PNG](image/FSolderPeriode2.PNG)
 </br>
 
-Enfin, nous pouvons réinitialiser l'application entière, supprimant ainsi tous les colocataires ainsi que toutes les dépenses.
+Finally, you can reset the entire application, deleting all colocataires and expenses.
+
 ![FMENU](image/FMENU2.PNG)
 
-## E5 entrainement :
+## E5 Training :
 
-Pour préparer l'épreuve de fin d'année l'e5 le professeur ma demander d'ajouter à mon application, des fonctionnalités supplémentaire qui permettent à un colocataire de trier les dépenses, dans l'ordre en fonction atttribut de son choix et d'afficher le montant total des dépenses.
-
+To prepare for the year-end exam (E5), the professor asked me to add new features that allow a colocataire to sort expenses based on their chosen attribute and display the total amount of expenses.
 
 ```plantuml
 @startuml SolderPeriode
@@ -304,7 +313,7 @@ colocataire--(Afficher le montant total des dépenses)
 }
 @endumlD
 ```
-Exemple tri par montant :
+Example sorting by amount :
 
 ![tri.PNG](image/tri.PNG)
 
