@@ -1,5 +1,7 @@
 # Application Colocation CROUS
 
+Context: The "Colocation CROUS" application is designed to help students manage the expenses in a shared apartment (colocation). The application allows users to easily add, modify, and delete colocataires (roommates) and expenses. It also offers a feature to distribute shared expenses among roommates, ensuring fair financial management.
+
 Prerequisites :
 
 To run this project, you need to install the connector/net (https://dev.mysql.com/downloads/file/?id=515908), for ADO.NET.
